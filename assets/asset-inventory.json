@@ -1,0 +1,817 @@
+[
+  {
+    "asset_id": "asset_001",
+    "original_filename": "hdphoto1.wdp",
+    "extracted_filename": "asset_001_hdphoto1.wdp",
+    "path": "assets/extracted/asset_001_hdphoto1.wdp",
+    "slide_number": null,
+    "slide_numbers": [],
+    "dimensions": {
+      "width": null,
+      "height": null
+    },
+    "aspect_ratio": null,
+    "file_type": "wdp",
+    "image_mode": null,
+    "has_alpha": false,
+    "estimated_resolution_quality": "unknown",
+    "classification": "unknown",
+    "suggested_reuse": "replace",
+    "notes": "JPEG XR/HDPhoto asset is not portable for the rebuilt deck; keep as source evidence only."
+  },
+  {
+    "asset_id": "asset_002",
+    "original_filename": "hdphoto2.wdp",
+    "extracted_filename": "asset_002_hdphoto2.wdp",
+    "path": "assets/extracted/asset_002_hdphoto2.wdp",
+    "slide_number": null,
+    "slide_numbers": [],
+    "dimensions": {
+      "width": null,
+      "height": null
+    },
+    "aspect_ratio": null,
+    "file_type": "wdp",
+    "image_mode": null,
+    "has_alpha": false,
+    "estimated_resolution_quality": "unknown",
+    "classification": "unknown",
+    "suggested_reuse": "replace",
+    "notes": "JPEG XR/HDPhoto asset is not portable for the rebuilt deck; keep as source evidence only."
+  },
+  {
+    "asset_id": "asset_003",
+    "original_filename": "hdphoto3.wdp",
+    "extracted_filename": "asset_003_hdphoto3.wdp",
+    "path": "assets/extracted/asset_003_hdphoto3.wdp",
+    "slide_number": null,
+    "slide_numbers": [],
+    "dimensions": {
+      "width": null,
+      "height": null
+    },
+    "aspect_ratio": null,
+    "file_type": "wdp",
+    "image_mode": null,
+    "has_alpha": false,
+    "estimated_resolution_quality": "unknown",
+    "classification": "unknown",
+    "suggested_reuse": "replace",
+    "notes": "JPEG XR/HDPhoto asset is not portable for the rebuilt deck; keep as source evidence only."
+  },
+  {
+    "asset_id": "asset_004",
+    "original_filename": "hdphoto4.wdp",
+    "extracted_filename": "asset_004_hdphoto4.wdp",
+    "path": "assets/extracted/asset_004_hdphoto4.wdp",
+    "slide_number": null,
+    "slide_numbers": [],
+    "dimensions": {
+      "width": null,
+      "height": null
+    },
+    "aspect_ratio": null,
+    "file_type": "wdp",
+    "image_mode": null,
+    "has_alpha": false,
+    "estimated_resolution_quality": "unknown",
+    "classification": "unknown",
+    "suggested_reuse": "replace",
+    "notes": "JPEG XR/HDPhoto asset is not portable for the rebuilt deck; keep as source evidence only."
+  },
+  {
+    "asset_id": "asset_005",
+    "original_filename": "image1.png",
+    "extracted_filename": "asset_005_image1.png",
+    "path": "assets/extracted/asset_005_image1.png",
+    "slide_number": 2,
+    "slide_numbers": [
+      2,
+      3,
+      7,
+      8,
+      9
+    ],
+    "dimensions": {
+      "width": 700,
+      "height": 193
+    },
+    "aspect_ratio": 3.627,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "low",
+    "classification": "background",
+    "suggested_reuse": "enhance",
+    "notes": "Wide image suitable for cinematic treatment after crop and contrast pass."
+  },
+  {
+    "asset_id": "asset_006",
+    "original_filename": "image10.png",
+    "extracted_filename": "asset_006_image10.png",
+    "path": "assets/extracted/asset_006_image10.png",
+    "slide_number": 2,
+    "slide_numbers": [
+      2
+    ],
+    "dimensions": {
+      "width": 264,
+      "height": 263
+    },
+    "aspect_ratio": 1.004,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "decorative",
+    "suggested_reuse": "redraw",
+    "notes": "PowerPoint-era decorative graphic; replace with the new technical visual system."
+  },
+  {
+    "asset_id": "asset_007",
+    "original_filename": "image11.png",
+    "extracted_filename": "asset_007_image11.png",
+    "path": "assets/extracted/asset_007_image11.png",
+    "slide_number": 3,
+    "slide_numbers": [
+      3
+    ],
+    "dimensions": {
+      "width": 954,
+      "height": 716
+    },
+    "aspect_ratio": 1.332,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "medium",
+    "classification": "screenshot",
+    "suggested_reuse": "redraw",
+    "notes": "Large raster source that likely represents a diagram or screenshot; rebuild if text-heavy."
+  },
+  {
+    "asset_id": "asset_008",
+    "original_filename": "image12.png",
+    "extracted_filename": "asset_008_image12.png",
+    "path": "assets/extracted/asset_008_image12.png",
+    "slide_number": 4,
+    "slide_numbers": [
+      4
+    ],
+    "dimensions": {
+      "width": 894,
+      "height": 537
+    },
+    "aspect_ratio": 1.665,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "medium",
+    "classification": "screenshot",
+    "suggested_reuse": "redraw",
+    "notes": "Large raster source that likely represents a diagram or screenshot; rebuild if text-heavy."
+  },
+  {
+    "asset_id": "asset_009",
+    "original_filename": "image13.png",
+    "extracted_filename": "asset_009_image13.png",
+    "path": "assets/extracted/asset_009_image13.png",
+    "slide_number": 5,
+    "slide_numbers": [
+      5
+    ],
+    "dimensions": {
+      "width": 608,
+      "height": 334
+    },
+    "aspect_ratio": 1.82,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "decorative",
+    "suggested_reuse": "redraw",
+    "notes": "PowerPoint-era decorative graphic; replace with the new technical visual system."
+  },
+  {
+    "asset_id": "asset_010",
+    "original_filename": "image14.png",
+    "extracted_filename": "asset_010_image14.png",
+    "path": "assets/extracted/asset_010_image14.png",
+    "slide_number": 6,
+    "slide_numbers": [
+      6
+    ],
+    "dimensions": {
+      "width": 887,
+      "height": 560
+    },
+    "aspect_ratio": 1.584,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "medium",
+    "classification": "screenshot",
+    "suggested_reuse": "redraw",
+    "notes": "Large raster source that likely represents a diagram or screenshot; rebuild if text-heavy."
+  },
+  {
+    "asset_id": "asset_011",
+    "original_filename": "image15.png",
+    "extracted_filename": "asset_011_image15.png",
+    "path": "assets/extracted/asset_011_image15.png",
+    "slide_number": 7,
+    "slide_numbers": [
+      7
+    ],
+    "dimensions": {
+      "width": 757,
+      "height": 426
+    },
+    "aspect_ratio": 1.777,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_012",
+    "original_filename": "image16.png",
+    "extracted_filename": "asset_012_image16.png",
+    "path": "assets/extracted/asset_012_image16.png",
+    "slide_number": 7,
+    "slide_numbers": [
+      7
+    ],
+    "dimensions": {
+      "width": 750,
+      "height": 423
+    },
+    "aspect_ratio": 1.773,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_013",
+    "original_filename": "image17.png",
+    "extracted_filename": "asset_013_image17.png",
+    "path": "assets/extracted/asset_013_image17.png",
+    "slide_number": 7,
+    "slide_numbers": [
+      7
+    ],
+    "dimensions": {
+      "width": 749,
+      "height": 418
+    },
+    "aspect_ratio": 1.792,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_014",
+    "original_filename": "image18.png",
+    "extracted_filename": "asset_014_image18.png",
+    "path": "assets/extracted/asset_014_image18.png",
+    "slide_number": 7,
+    "slide_numbers": [
+      7
+    ],
+    "dimensions": {
+      "width": 755,
+      "height": 419
+    },
+    "aspect_ratio": 1.802,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_015",
+    "original_filename": "image19.png",
+    "extracted_filename": "asset_015_image19.png",
+    "path": "assets/extracted/asset_015_image19.png",
+    "slide_number": 8,
+    "slide_numbers": [
+      8
+    ],
+    "dimensions": {
+      "width": 753,
+      "height": 421
+    },
+    "aspect_ratio": 1.789,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_016",
+    "original_filename": "image2.png",
+    "extracted_filename": "asset_016_image2.png",
+    "path": "assets/extracted/asset_016_image2.png",
+    "slide_number": 1,
+    "slide_numbers": [
+      1
+    ],
+    "dimensions": {
+      "width": 700,
+      "height": 193
+    },
+    "aspect_ratio": 3.627,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "low",
+    "classification": "background",
+    "suggested_reuse": "enhance",
+    "notes": "Wide image suitable for cinematic treatment after crop and contrast pass."
+  },
+  {
+    "asset_id": "asset_017",
+    "original_filename": "image20.png",
+    "extracted_filename": "asset_017_image20.png",
+    "path": "assets/extracted/asset_017_image20.png",
+    "slide_number": 8,
+    "slide_numbers": [
+      8
+    ],
+    "dimensions": {
+      "width": 740,
+      "height": 415
+    },
+    "aspect_ratio": 1.783,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_018",
+    "original_filename": "image21.png",
+    "extracted_filename": "asset_018_image21.png",
+    "path": "assets/extracted/asset_018_image21.png",
+    "slide_number": 8,
+    "slide_numbers": [
+      8
+    ],
+    "dimensions": {
+      "width": 1053,
+      "height": 605
+    },
+    "aspect_ratio": 1.74,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_019",
+    "original_filename": "image22.png",
+    "extracted_filename": "asset_019_image22.png",
+    "path": "assets/extracted/asset_019_image22.png",
+    "slide_number": 8,
+    "slide_numbers": [
+      8
+    ],
+    "dimensions": {
+      "width": 928,
+      "height": 599
+    },
+    "aspect_ratio": 1.549,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_020",
+    "original_filename": "image23.png",
+    "extracted_filename": "asset_020_image23.png",
+    "path": "assets/extracted/asset_020_image23.png",
+    "slide_number": 9,
+    "slide_numbers": [
+      9
+    ],
+    "dimensions": {
+      "width": 751,
+      "height": 417
+    },
+    "aspect_ratio": 1.801,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_021",
+    "original_filename": "image24.png",
+    "extracted_filename": "asset_021_image24.png",
+    "path": "assets/extracted/asset_021_image24.png",
+    "slide_number": 9,
+    "slide_numbers": [
+      9
+    ],
+    "dimensions": {
+      "width": 747,
+      "height": 416
+    },
+    "aspect_ratio": 1.796,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_022",
+    "original_filename": "image25.png",
+    "extracted_filename": "asset_022_image25.png",
+    "path": "assets/extracted/asset_022_image25.png",
+    "slide_number": 9,
+    "slide_numbers": [
+      9
+    ],
+    "dimensions": {
+      "width": 739,
+      "height": 416
+    },
+    "aspect_ratio": 1.776,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_023",
+    "original_filename": "image26.png",
+    "extracted_filename": "asset_023_image26.png",
+    "path": "assets/extracted/asset_023_image26.png",
+    "slide_number": 9,
+    "slide_numbers": [
+      9
+    ],
+    "dimensions": {
+      "width": 742,
+      "height": 416
+    },
+    "aspect_ratio": 1.784,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Lab visual from source deck; crop away legacy text overlay where needed and grade consistently."
+  },
+  {
+    "asset_id": "asset_024",
+    "original_filename": "image27.png",
+    "extracted_filename": "asset_024_image27.png",
+    "path": "assets/extracted/asset_024_image27.png",
+    "slide_number": 10,
+    "slide_numbers": [
+      10
+    ],
+    "dimensions": {
+      "width": 642,
+      "height": 478
+    },
+    "aspect_ratio": 1.343,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "decorative",
+    "suggested_reuse": "redraw",
+    "notes": "PowerPoint-era decorative graphic; replace with the new technical visual system."
+  },
+  {
+    "asset_id": "asset_025",
+    "original_filename": "image28.jpeg",
+    "extracted_filename": "asset_025_image28.jpeg",
+    "path": "assets/extracted/asset_025_image28.jpeg",
+    "slide_number": 11,
+    "slide_numbers": [
+      11
+    ],
+    "dimensions": {
+      "width": 961,
+      "height": 541
+    },
+    "aspect_ratio": 1.776,
+    "file_type": "jpeg",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Product portfolio visual from source deck; preserve if it stays sharp at presentation scale."
+  },
+  {
+    "asset_id": "asset_026",
+    "original_filename": "image29.png",
+    "extracted_filename": "asset_026_image29.png",
+    "path": "assets/extracted/asset_026_image29.png",
+    "slide_number": 11,
+    "slide_numbers": [
+      11
+    ],
+    "dimensions": {
+      "width": 200,
+      "height": 53
+    },
+    "aspect_ratio": 3.774,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "low",
+    "classification": "logo",
+    "suggested_reuse": "keep",
+    "notes": "Small identity/brand asset; reuse only if visually clean."
+  },
+  {
+    "asset_id": "asset_027",
+    "original_filename": "image3.png",
+    "extracted_filename": "asset_027_image3.png",
+    "path": "assets/extracted/asset_027_image3.png",
+    "slide_number": null,
+    "slide_numbers": [],
+    "dimensions": {
+      "width": 202,
+      "height": 56
+    },
+    "aspect_ratio": 3.607,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "low",
+    "classification": "logo",
+    "suggested_reuse": "keep",
+    "notes": "Small identity/brand asset; reuse only if visually clean."
+  },
+  {
+    "asset_id": "asset_028",
+    "original_filename": "image30.jpeg",
+    "extracted_filename": "asset_028_image30.jpeg",
+    "path": "assets/extracted/asset_028_image30.jpeg",
+    "slide_number": 12,
+    "slide_numbers": [
+      12
+    ],
+    "dimensions": {
+      "width": 483,
+      "height": 271
+    },
+    "aspect_ratio": 1.782,
+    "file_type": "jpeg",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Product portfolio visual from source deck; preserve if it stays sharp at presentation scale."
+  },
+  {
+    "asset_id": "asset_029",
+    "original_filename": "image31.png",
+    "extracted_filename": "asset_029_image31.png",
+    "path": "assets/extracted/asset_029_image31.png",
+    "slide_number": 12,
+    "slide_numbers": [
+      12
+    ],
+    "dimensions": {
+      "width": 469,
+      "height": 263
+    },
+    "aspect_ratio": 1.783,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Product portfolio visual from source deck; preserve if it stays sharp at presentation scale."
+  },
+  {
+    "asset_id": "asset_030",
+    "original_filename": "image32.png",
+    "extracted_filename": "asset_030_image32.png",
+    "path": "assets/extracted/asset_030_image32.png",
+    "slide_number": 12,
+    "slide_numbers": [
+      12
+    ],
+    "dimensions": {
+      "width": 468,
+      "height": 263
+    },
+    "aspect_ratio": 1.779,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Product portfolio visual from source deck; preserve if it stays sharp at presentation scale."
+  },
+  {
+    "asset_id": "asset_031",
+    "original_filename": "image33.jpeg",
+    "extracted_filename": "asset_031_image33.jpeg",
+    "path": "assets/extracted/asset_031_image33.jpeg",
+    "slide_number": 12,
+    "slide_numbers": [
+      12
+    ],
+    "dimensions": {
+      "width": 464,
+      "height": 261
+    },
+    "aspect_ratio": 1.778,
+    "file_type": "jpeg",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Product portfolio visual from source deck; preserve if it stays sharp at presentation scale."
+  },
+  {
+    "asset_id": "asset_032",
+    "original_filename": "image4.jpeg",
+    "extracted_filename": "asset_032_image4.jpeg",
+    "path": "assets/extracted/asset_032_image4.jpeg",
+    "slide_number": 1,
+    "slide_numbers": [
+      1
+    ],
+    "dimensions": {
+      "width": 1694,
+      "height": 953
+    },
+    "aspect_ratio": 1.778,
+    "file_type": "jpeg",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "high",
+    "classification": "photo",
+    "suggested_reuse": "enhance",
+    "notes": "Photographic source; crop, darken, and grade consistently before reuse."
+  },
+  {
+    "asset_id": "asset_033",
+    "original_filename": "image5.png",
+    "extracted_filename": "asset_033_image5.png",
+    "path": "assets/extracted/asset_033_image5.png",
+    "slide_number": 2,
+    "slide_numbers": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10
+    ],
+    "dimensions": {
+      "width": 1650,
+      "height": 1818
+    },
+    "aspect_ratio": 0.908,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "high",
+    "classification": "screenshot",
+    "suggested_reuse": "redraw",
+    "notes": "Large raster source that likely represents a diagram or screenshot; rebuild if text-heavy."
+  },
+  {
+    "asset_id": "asset_034",
+    "original_filename": "image6.emf",
+    "extracted_filename": "asset_034_image6.emf",
+    "path": "assets/extracted/asset_034_image6.emf",
+    "slide_number": 2,
+    "slide_numbers": [
+      2
+    ],
+    "dimensions": {
+      "width": null,
+      "height": null
+    },
+    "aspect_ratio": null,
+    "file_type": "emf",
+    "image_mode": null,
+    "has_alpha": false,
+    "estimated_resolution_quality": "vector / not raster",
+    "classification": "diagram",
+    "suggested_reuse": "redraw",
+    "notes": "Legacy EMF/vector drawing; safer to rebuild as native editable geometry."
+  },
+  {
+    "asset_id": "asset_035",
+    "original_filename": "image7.png",
+    "extracted_filename": "asset_035_image7.png",
+    "path": "assets/extracted/asset_035_image7.png",
+    "slide_number": 2,
+    "slide_numbers": [
+      2
+    ],
+    "dimensions": {
+      "width": 497,
+      "height": 340
+    },
+    "aspect_ratio": 1.462,
+    "file_type": "png",
+    "image_mode": "RGB",
+    "has_alpha": false,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "decorative",
+    "suggested_reuse": "redraw",
+    "notes": "PowerPoint-era decorative graphic; replace with the new technical visual system."
+  },
+  {
+    "asset_id": "asset_036",
+    "original_filename": "image8.png",
+    "extracted_filename": "asset_036_image8.png",
+    "path": "assets/extracted/asset_036_image8.png",
+    "slide_number": 2,
+    "slide_numbers": [
+      2
+    ],
+    "dimensions": {
+      "width": 264,
+      "height": 263
+    },
+    "aspect_ratio": 1.004,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "decorative",
+    "suggested_reuse": "redraw",
+    "notes": "PowerPoint-era decorative graphic; replace with the new technical visual system."
+  },
+  {
+    "asset_id": "asset_037",
+    "original_filename": "image9.png",
+    "extracted_filename": "asset_037_image9.png",
+    "path": "assets/extracted/asset_037_image9.png",
+    "slide_number": 2,
+    "slide_numbers": [
+      2
+    ],
+    "dimensions": {
+      "width": 264,
+      "height": 263
+    },
+    "aspect_ratio": 1.004,
+    "file_type": "png",
+    "image_mode": "RGBA",
+    "has_alpha": true,
+    "estimated_resolution_quality": "low-medium",
+    "classification": "decorative",
+    "suggested_reuse": "redraw",
+    "notes": "PowerPoint-era decorative graphic; replace with the new technical visual system."
+  }
+]

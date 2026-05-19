@@ -1,0 +1,47 @@
+{
+  "brandDirection": "Schneider Electric-inspired premium industrial technology keynote",
+  "colorPalette": {
+    "primaryAccent": "#3DCD58",
+    "background": "#080C0E",
+    "secondaryBackground": "#10171B",
+    "textPrimary": "#F5F8F6",
+    "textSecondary": "#A8B4B1",
+    "mutedLines": "#344148",
+    "supportingLabColors": {
+      "SU": "#188DCC",
+      "ML": "#F08A00",
+      "KP": "#D32222"
+    }
+  },
+  "typography": {
+    "titleFont": "Aptos Display",
+    "bodyFont": "Aptos",
+    "titleRangePt": "34-54",
+    "sectionTitleRangePt": "30-38",
+    "bodyMinimumPt": 18,
+    "smallLabelMinimumPt": "12-14 for main content; footer intentionally smaller"
+  },
+  "layout": {
+    "format": "16:9 widescreen",
+    "sizeInches": {
+      "width": 13.333,
+      "height": 7.5
+    },
+    "grid": "0.68 in outer margin, 12-column composition, consistent footer rail",
+    "footer": "Subtle copyright/confidentiality marking with page number"
+  },
+  "visualLanguage": [
+    "dark graphite backgrounds",
+    "Schneider Electric green accents used sparingly",
+    "technical linework and network motifs",
+    "map-based lab network",
+    "native PowerPoint hierarchy diagrams",
+    "photo overlays with consistent dark grading",
+    "standards capability matrix"
+  ],
+  "assetTreatment": {
+    "photos": "cropped to 16:9, contrast graded, dark overlay in PowerPoint",
+    "diagrams": "redrawn as native shapes or SVG technical visuals",
+    "logos": "official extracted Schneider Electric assets only"
+  }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="fade" x1="0" x2="1">
+      <stop offset="0" stop-color="#080C0E"/>
+      <stop offset=".55" stop-color="#10171B"/>
+      <stop offset="1" stop-color="#080C0E"/>
+    </linearGradient>
+    <pattern id="diag" width="72" height="72" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0H72" stroke="#344148" stroke-width="1" opacity=".28"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#fade)"/>
+  <rect width="1920" height="1080" fill="url(#diag)" opacity=".55"/>
+  <g fill="none" stroke="#3DCD58" stroke-width="3" opacity=".58">
+    <path d="M138 836H414l76-92h292l86-102h314l108-132h386"/>
+    <path d="M134 276h292l96 88h254l92 78h302l86 78h280"/>
+    <circle cx="414" cy="836" r="10" fill="#3DCD58"/>
+    <circle cx="782" cy="744" r="10" fill="#3DCD58"/>
+    <circle cx="1182" cy="642" r="10" fill="#3DCD58"/>
+    <circle cx="1656" cy="510" r="10" fill="#3DCD58"/>
+  </g>
+  <g stroke="#5D6A70" stroke-width="2" opacity=".52">
+    <rect x="1140" y="184" width="314" height="202" rx="2" fill="none"/>
+    <rect x="1210" y="248" width="314" height="202" rx="2" fill="none"/>
+    <rect x="1280" y="312" width="314" height="202" rx="2" fill="none"/>
+  </g>
+</svg>
