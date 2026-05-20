@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>UE LABS - Animated web rebuild</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=slide7-description-20260520" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   </head>
   <body>
     <main class="stage" id="stage" aria-label="UE LABS animated web presentation">
@@ -133,7 +134,7 @@
         </ol>
 
         <aside class="org-formula" data-reveal>
-          Energy Management → Power Systems &amp; Services → ETO → Universal Enclosures → UE Labs
+          <span>Energy Management → Power Systems &amp; Services → ETO → Universal Enclosures → UE Labs</span>
         </aside>
 
         <footer class="slide-footer" data-reveal>
@@ -167,8 +168,8 @@
             <path class="gov-link branch" d="M864 335 C1016 392 1126 448 1230 498" />
           </svg>
 
-          <div class="gov-node gov-director">CS&amp;Q Director</div>
-          <p class="gov-note">Leads UE labs directly and also leads the Quality Director function for the labs.</p>
+          <div class="gov-node gov-director"><span>CS&amp;Q Director</span></div>
+          <p class="gov-note"><span>Leads UE labs directly and also leads the Quality Director function for the labs.</span></p>
 
           <div class="gov-node gov-side gov-side-left">
             <span>Customer Satisfaction &amp; Quality</span>
@@ -253,7 +254,7 @@
         </div>
 
         <aside class="mission-close" data-reveal>
-          UE Labs connects production quality, certification readiness and product validation.
+          <span>UE Labs connects production quality, certification readiness and product validation.</span>
         </aside>
 
         <footer class="slide-footer" data-reveal>
@@ -278,19 +279,19 @@
 
         <div class="network-layout">
           <figure class="network-map" aria-label="Map showing UE Labs in France and Spain">
-            <img src="assets/extracted/asset_035_image7.png" alt="" />
+            <img src="assets/FRANCE_SPAIN_.png" alt="" />
             <svg class="network-routes" viewBox="0 0 497 340" aria-hidden="true">
-              <path class="route route-kp" d="M175 208 C184 178 202 154 238 135" />
-              <path class="route route-ml" d="M190 211 C199 181 216 155 238 135" />
-              <g class="map-pin map-pin-su" transform="translate(238 135)">
+              <path class="route route-kp" d="M227 198 C236 158 279 112 328 94" />
+              <path class="route route-ml" d="M244 200 C250 159 286 116 328 94" />
+              <g class="map-pin map-pin-su" transform="translate(328 94)">
                 <circle r="12" />
                 <text y="4">SU</text>
               </g>
-              <g class="map-pin map-pin-kp" transform="translate(175 208)">
+              <g class="map-pin map-pin-kp" transform="translate(227 198)">
                 <circle r="12" />
                 <text y="4">KP</text>
               </g>
-              <g class="map-pin map-pin-ml" transform="translate(190 211)">
+              <g class="map-pin map-pin-ml" transform="translate(244 200)">
                 <circle r="12" />
                 <text y="4">ML</text>
               </g>
@@ -318,7 +319,7 @@
               </article>
             </div>
 
-            <div class="network-summary" data-reveal>UE Labs network: SU / ML / KP</div>
+            <div class="network-summary" data-reveal><span>UE Labs network: SU / ML / KP</span></div>
           </aside>
         </div>
 
@@ -454,30 +455,71 @@
 
         <section class="product-stage" aria-labelledby="products-title">
           <header class="product-header">
-            <p class="kicker" data-reveal>Validated products</p>
-            <h3 id="products-title" data-reveal>ClimaSys products</h3>
+            <p class="kicker" data-reveal>ML validation scope</p>
+            <h3 id="products-title" data-reveal><span>ClimaSys</span> validation point</h3>
+            <p class="product-copy" data-reveal>
+              Molins de Rei Lab validates ClimaSys thermal management products within the UE Labs network.
+            </p>
           </header>
 
-          <div class="product-family" data-reveal>
-            <img src="assets/processed/product_climasys.png" alt="ClimaSys product family" />
+          <div class="product-validation" data-reveal>
+            <b>ML</b>
+            <div>
+              <span>Validated in Molins de Rei</span>
+              <small>Cooling, ventilation and thermal control products.</small>
+            </div>
+          </div>
+
+          <div class="product-family product-family-transparent" data-reveal>
+            <img src="assets/2000 x 2000.png" alt="ClimaSys product family" />
           </div>
 
           <div class="product-tiles" aria-label="ClimaSys product examples">
-            <article class="product-tile">
-              <div class="product-crop product-crop-cooling">
-                <img src="assets/processed/climasys_products_from_pptx.png" alt="" />
+            <article class="product-tile product-tile-cooling">
+              <div class="product-image has-model">
+                <model-viewer
+                  class="product-model"
+                  data-product-model
+                  data-src="assets/processed/cooling_unit_web.glb"
+                  data-start-orbit="-326deg 67deg auto"
+                  data-final-orbit="34deg 67deg auto"
+                  data-model-delay="1660"
+                  data-model-duration="2300"
+                  camera-orbit="-326deg 67deg auto"
+                  field-of-view="24deg"
+                  exposure="1"
+                  shadow-intensity="0.32"
+                  interaction-prompt="none"
+                  aria-hidden="true"
+                ></model-viewer>
+                <img class="model-fallback" src="assets/processed/climasys_cooling_unit.png" alt="" />
               </div>
               <span>Cooling unit</span>
             </article>
-            <article class="product-tile">
-              <div class="product-crop product-crop-fan">
-                <img src="assets/processed/climasys_products_from_pptx.png" alt="" />
+            <article class="product-tile product-tile-fan">
+              <div class="product-image has-model">
+                <model-viewer
+                  class="product-model"
+                  data-product-model
+                  data-src="assets/processed/cooling_fan_schneider_web.glb"
+                  data-start-orbit="-138deg 64deg auto"
+                  data-final-orbit="222deg 64deg auto"
+                  data-model-delay="1800"
+                  data-model-duration="2200"
+                  camera-orbit="-138deg 64deg auto"
+                  field-of-view="21deg"
+                  exposure="1.22"
+                  shadow-intensity="0.18"
+                  interaction-prompt="none"
+                  aria-hidden="true"
+                ></model-viewer>
+                <img class="model-fallback" src="assets/processed/climasys_fan_module.png" alt="" />
               </div>
               <span>Fan module</span>
             </article>
-            <article class="product-tile">
-              <div class="product-crop product-crop-control">
-                <img src="assets/processed/climasys_products_from_pptx.png" alt="" />
+            <article class="product-tile product-tile-control">
+              <div class="product-image">
+                <img src="assets/processed/climasys_thermostat.png" alt="" />
               </div>
               <span>Thermostat</span>
             </article>
@@ -493,16 +535,258 @@
           <img src="output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-09.png" alt="" />
         </div>
       </section>
+
+      <section class="slide slide-scope" data-slide="10" aria-labelledby="scope-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="scope-header">
+          <p class="kicker" data-reveal>Certification scope</p>
+          <h2 id="scope-title" data-split>Standards &amp; certification scope</h2>
+          <p class="scope-subtitle" data-reveal>Original standards rebuilt as a capability matrix by lab.</p>
+        </header>
+
+        <aside class="scope-card">
+          <img src="assets/processed/ul_certificate.png" alt="" />
+          <h3>Capellades Lab is CTDP by UL since 1999, File number DA307.</h3>
+          <p>Tests according to UL Standard can be performed with total autonomy and direct recognition of Underwriters Laboratories Inc.</p>
+          <strong>UL / CSA recognition remains attached to KP in the matrix.</strong>
+        </aside>
+
+        <div class="scope-matrix" aria-label="Certification standards by lab">
+          <div class="scope-lab scope-su">
+            <b>SU</b>
+            <span>Sarre-Union</span>
+          </div>
+          <div class="scope-lab scope-ml">
+            <b>ML</b>
+            <span>Molins de Rei</span>
+          </div>
+          <div class="scope-lab scope-kp">
+            <b>KP</b>
+            <span>Capellades</span>
+          </div>
+
+          <div class="scope-row-label scope-row-iec">IEC</div>
+          <div class="scope-row-label scope-row-iso">ISO</div>
+          <div class="scope-row-label scope-row-en">EN</div>
+          <div class="scope-row-label scope-row-ul">UL /<br />CSA</div>
+
+          <div class="scope-cell scope-cell-su scope-cell-iec">
+            <span>IEC 62208</span>
+            <span>IEC 60079-0</span>
+          </div>
+          <div class="scope-cell scope-cell-ml scope-cell-iec">
+            <span>IEC 62208</span>
+            <span>IEC 61439-1</span>
+            <span>IEC 61439-5</span>
+          </div>
+          <div class="scope-cell scope-cell-kp scope-cell-iec">
+            <span>IEC 62208</span>
+          </div>
+
+          <div class="scope-cell scope-cell-su scope-cell-iso">
+            <span>ISO 12944-6</span>
+            <span>ISO 4624</span>
+          </div>
+          <div class="scope-cell scope-cell-ml scope-cell-iso"></div>
+          <div class="scope-cell scope-cell-kp scope-cell-iso">
+            <span>ISO 12944-6</span>
+          </div>
+
+          <div class="scope-cell scope-cell-su scope-cell-en">
+            <span>EN 61386-1</span>
+          </div>
+          <div class="scope-cell scope-cell-ml scope-cell-en"></div>
+          <div class="scope-cell scope-cell-kp scope-cell-en"></div>
+
+          <div class="scope-cell scope-cell-su scope-cell-ul"></div>
+          <div class="scope-cell scope-cell-ml scope-cell-ul"></div>
+          <div class="scope-cell scope-cell-kp scope-cell-ul">
+            <span>UL 50 / CSA C22.2 N° 94.1</span>
+            <span>UL 50E / CSA C22.2 N° 94.2</span>
+            <span>UL 746 C</span>
+          </div>
+        </div>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2020 Schneider Electric, All Rights Reserved | Confidential Property of Schneider Electric</span>
+          <span>Page 10</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-10.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-products-tested" data-slide="11" aria-labelledby="tested-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="tested-header">
+          <p class="kicker" data-reveal>Products tested</p>
+          <h2 id="tested-title" data-split>Products tested</h2>
+          <p class="tested-subtitle" data-reveal>Types of Products Tested: PanelSeT SM, PanelSeT PLM and ClimaSys portfolios.</p>
+        </header>
+
+        <div class="tested-list" aria-label="Product families tested">
+          <article class="tested-card tested-spacial">
+            <div class="tested-thumb">
+              <img src="assets/processed/product_spacial_centered.png" alt="" />
+            </div>
+            <div>
+              <h3>PanelSeT SM</h3>
+              <p>Steel and stainless steel</p>
+            </div>
+          </article>
+
+          <article class="tested-card tested-thalassa">
+            <div class="tested-thumb">
+              <img src="assets/processed/product_thalassa_centered.png" alt="" />
+            </div>
+            <div>
+              <h3>PanelSeT PLM</h3>
+              <p>Plastic and glass-reinforced polyester</p>
+            </div>
+          </article>
+
+          <article class="tested-card tested-climasys">
+            <div class="tested-thumb">
+              <img src="assets/processed/product_climasys_centered.png" alt="" />
+            </div>
+            <div>
+              <h3>ClimaSys</h3>
+              <p>Thermal management systems</p>
+            </div>
+          </article>
+        </div>
+
+        <figure class="tested-hero" aria-label="Product portfolio group">
+          <img src="assets/processed/product_portfolio_hero.jpg" alt="PanelSeT SM, PanelSeT PLM and ClimaSys product portfolio" />
+          <figcaption>
+            <span>Portfolio coverage</span>
+            <b>3 product families</b>
+          </figcaption>
+        </figure>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2020 Schneider Electric, All Rights Reserved | Confidential Property of Schneider Electric</span>
+          <span>Page 11</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-11.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-environments" data-slide="12" aria-labelledby="environments-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="env-header">
+          <p class="kicker" data-reveal>Environments</p>
+          <h2 id="environments-title"><span>Product families / environments</span></h2>
+        </header>
+
+        <p class="env-statement">
+          <span>Spacial, Thalassa and ClimaSys enclosures</span>
+          <span>and thermal management solutions are the</span>
+          <span><strong>world's best choice</strong> for equipment protection</span>
+          <span>in any type of environment.</span>
+        </p>
+
+        <figure class="env-hero" aria-label="Product families portfolio in industrial environment">
+          <img src="assets/processed/product_portfolio_hero.jpg" alt="Spacial, Thalassa and ClimaSys products" />
+        </figure>
+
+        <svg class="env-route" viewBox="0 0 1360 620" aria-hidden="true">
+          <path class="env-route-shadow" d="M40 520 H300 L356 450 H560 L615 370 H780 L858 250 H1080 L1128 190 H1310" />
+          <path class="env-route-line" d="M40 520 H300 L356 450 H560 L615 370 H780 L858 250 H1080 L1128 190 H1310" />
+          <circle class="env-node env-node-a" cx="300" cy="520" r="10" />
+          <circle class="env-node env-node-b" cx="615" cy="370" r="10" />
+          <circle class="env-node env-node-c" cx="858" cy="250" r="10" />
+          <circle class="env-node env-node-d" cx="1128" cy="190" r="10" />
+        </svg>
+
+        <div class="env-cards" aria-label="Environment validation themes">
+          <article class="env-card env-card-industrial">
+            <h3>Industrial protection</h3>
+            <p>Protection for equipment in demanding industrial settings</p>
+          </article>
+          <article class="env-card env-card-material">
+            <h3>Material resistance</h3>
+            <p>Steel, stainless steel, plastic and glass-reinforced polyester</p>
+          </article>
+          <article class="env-card env-card-thermal">
+            <h3>Thermal management</h3>
+            <p>ClimaSys systems for heat and enclosure performance</p>
+          </article>
+          <article class="env-card env-card-reliability">
+            <h3>Enclosure reliability</h3>
+            <p>Validation focus across environments and use cases</p>
+          </article>
+        </div>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2020 Schneider Electric, All Rights Reserved | Confidential Property of Schneider Electric</span>
+          <span>Page 12</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-12.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-closing" data-slide="13" aria-labelledby="closing-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+
+        <header class="closing-brand" data-reveal>
+          <img src="assets/processed/schneider_logo_green.png" alt="Schneider Electric" />
+        </header>
+
+        <svg class="closing-route" viewBox="0 0 1640 560" aria-hidden="true">
+          <path class="closing-route-shadow" d="M44 124 H322 L414 210 H652 L742 284 H1048 L1136 360 H1404 L1506 360" />
+          <path class="closing-route-line closing-route-top" d="M44 124 H322 L414 210 H652 L742 284 H1048 L1136 360 H1404 L1506 360" />
+          <path class="closing-route-shadow" d="M44 486 H304 L376 400 H662 L742 400 H1048 L1136 360" />
+          <path class="closing-route-line closing-route-bottom" d="M44 486 H304 L376 400 H662 L742 400 H1048 L1136 360" />
+          <circle class="closing-node closing-node-a" cx="304" cy="486" r="10" />
+          <circle class="closing-node closing-node-b" cx="662" cy="400" r="10" />
+          <circle class="closing-node closing-node-c" cx="1048" cy="400" r="10" />
+          <circle class="closing-node closing-node-d" cx="1404" cy="360" r="10" />
+        </svg>
+
+        <div class="closing-frames" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <section class="closing-copy">
+          <h2 id="closing-title" data-split>UE LABS</h2>
+          <div class="closing-rule" aria-hidden="true"></div>
+          <p data-reveal>Testing confidence. Certification readiness. Product quality.</p>
+        </section>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2020 Schneider Electric, All Rights Reserved | Confidential Property of Schneider Electric</span>
+          <span>Page 13</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-13.png" alt="" />
+        </div>
+      </section>
     </main>
 
     <nav class="controls" aria-label="Slide controls">
-      <button class="control icon-control" id="prev" type="button" aria-label="Previous slide">Prev</button>
-      <button class="control icon-control" id="next" type="button" aria-label="Next slide">Next</button>
-      <button class="control" id="replay" type="button">Replay</button>
-      <button class="control" id="reference" type="button" aria-pressed="false">Reference</button>
+      <button class="control icon-control" id="prev" type="button" aria-label="Previous slide" title="Previous slide">‹</button>
+      <button class="control icon-control" id="next" type="button" aria-label="Next slide" title="Next slide">›</button>
+      <button class="control" id="replay" type="button" aria-label="Replay animation" title="Replay animation">↻</button>
+      <button class="control" id="reference" type="button" aria-label="Toggle reference" title="Toggle reference" aria-pressed="false">Ref</button>
+      <button class="control icon-control" id="fullscreen" type="button" aria-label="Toggle fullscreen" title="Toggle fullscreen" aria-pressed="false">⛶</button>
       <span class="counter" id="counter">01 / 13</span>
     </nav>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=slide7-description-20260520"></script>
   </body>
 </html>
