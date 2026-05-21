@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>UE LABS - Animated web rebuild</title>
-    <link rel="stylesheet" href="styles.css?v=slide7-description-20260520" />
+    <link rel="stylesheet" href="styles.css?v=env-focus-20260521" />
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   </head>
   <body>
@@ -59,6 +59,29 @@
           <h2 id="snapshot-title" data-title-reveal>UE Labs at a glance</h2>
           <p class="snapshot-subtitle" data-reveal>Three local manufacturing-plant laboratories supporting validation, certification and quality.</p>
         </header>
+
+        <div class="snapshot-constellation" aria-label="UE Labs three-site network">
+          <svg class="constellation-canvas" viewBox="0 0 620 360" aria-hidden="true">
+            <path class="constellation-link constellation-link-su-ml" d="M68 43 C184 24 298 58 372 147" />
+            <path class="constellation-link constellation-link-ml-kp" d="M372 147 C322 230 248 281 161 277" />
+            <path class="constellation-link constellation-link-kp-su" d="M161 277 C78 217 44 121 68 43" />
+          </svg>
+          <article class="constellation-node constellation-su">
+            <b>SU</b>
+            <span>Sarre-Union</span>
+            <small>France</small>
+          </article>
+          <article class="constellation-node constellation-ml">
+            <b>ML</b>
+            <span>Molins de Rei</span>
+            <small>Spain</small>
+          </article>
+          <article class="constellation-node constellation-kp">
+            <b>KP</b>
+            <span>Capellades</span>
+            <small>Spain</small>
+          </article>
+        </div>
 
         <aside class="plant-note" data-reveal>
           <span>One lab in each manufacturing plant:</span>
@@ -163,9 +186,9 @@
             <path class="gov-link thin" d="M800 248 V292" />
             <path class="gov-link side" d="M590 262 H366" />
             <path class="gov-link side" d="M1010 262 H1234" />
-            <path class="gov-link branch" d="M736 338 C626 330 480 330 300 330 V352" />
-            <path class="gov-link branch" d="M800 338 C786 330 746 330 720 330 V352" />
-            <path class="gov-link branch" d="M864 338 C970 330 1044 330 1084 330 V352" />
+            <path class="gov-link branch lab-route-su" d="M736 338 C638 372 456 386 300 420" />
+            <path class="gov-link branch lab-route-ml" d="M800 338 C790 374 742 392 720 420" />
+            <path class="gov-link branch lab-route-kp" d="M864 338 C954 372 1036 390 1088 420" />
           </svg>
 
           <div class="gov-node gov-director"><span>CS&amp;Q Director</span></div>
@@ -373,7 +396,21 @@
               <p>Validation support for metal enclosure production quality and product compliance checks.</p>
             </div>
             <figure>
-              <img src="assets/processed/product_spacial_centered.png" alt="PanelSeT steel enclosure family" />
+              <model-viewer
+                class="capellades-steel-model"
+                data-product-model
+                data-src="assets/processed/steel_web.glb"
+                data-start-orbit="-326deg 66deg auto"
+                data-final-orbit="34deg 66deg auto"
+                data-model-delay="2700"
+                data-model-duration="2400"
+                camera-orbit="-326deg 66deg auto"
+                field-of-view="23deg"
+                exposure="1.02"
+                shadow-intensity="0.24"
+                interaction-prompt="none"
+                aria-label="PanelSeT steel enclosure family 3D model"
+              ></model-viewer>
             </figure>
           </article>
 
@@ -486,7 +523,21 @@
           </div>
 
           <div class="product-family product-family-transparent" data-reveal>
-            <img src="assets/2000 x 2000.png" alt="ClimaSys product family" />
+            <model-viewer
+              class="product-family-model"
+              data-product-model
+              data-src="assets/processed/climasys_family_web.glb"
+              data-start-orbit="-326deg 66deg auto"
+              data-final-orbit="34deg 66deg auto"
+              data-model-delay="2960"
+              data-model-duration="2400"
+              camera-orbit="-326deg 66deg auto"
+              field-of-view="22deg"
+              exposure="1.04"
+              shadow-intensity="0.2"
+              interaction-prompt="none"
+              aria-label="ClimaSys product family 3D model"
+            ></model-viewer>
           </div>
 
           <div class="product-tiles" aria-label="Representative ClimaSys product examples">
@@ -498,7 +549,7 @@
                   data-src="assets/processed/cooling_unit_web.glb"
                   data-start-orbit="-326deg 67deg auto"
                   data-final-orbit="34deg 67deg auto"
-                  data-model-delay="1660"
+                  data-model-delay="3360"
                   data-model-duration="2300"
                   camera-orbit="-326deg 67deg auto"
                   field-of-view="24deg"
@@ -519,7 +570,7 @@
                   data-src="assets/processed/cooling_fan_schneider_web.glb"
                   data-start-orbit="-138deg 64deg auto"
                   data-final-orbit="222deg 64deg auto"
-                  data-model-delay="1800"
+                  data-model-delay="3500"
                   data-model-duration="2200"
                   camera-orbit="-138deg 64deg auto"
                   field-of-view="21deg"
@@ -540,7 +591,7 @@
                   data-src="assets/processed/thermostat_colored_web.glb"
                   data-start-orbit="-326deg 66deg auto"
                   data-final-orbit="34deg 66deg auto"
-                  data-model-delay="1940"
+                  data-model-delay="3640"
                   data-model-duration="2200"
                   camera-orbit="-326deg 66deg auto"
                   field-of-view="25deg"
@@ -572,7 +623,7 @@
 
         <header class="scope-header">
           <p class="kicker" data-reveal>Certification scope</p>
-          <h2 id="scope-title" data-split>Standards &amp; certification scope</h2>
+          <h2 id="scope-title" data-title-reveal>Standards &amp; certification scope</h2>
           <p class="scope-subtitle" data-reveal>Original standards rebuilt as a capability matrix by lab.</p>
         </header>
 
@@ -670,7 +721,7 @@
 
         <header class="tested-header">
           <p class="kicker" data-reveal>Products tested</p>
-          <h2 id="tested-title" data-split>Products tested</h2>
+          <h2 id="tested-title" data-title-reveal>Products tested</h2>
           <p class="tested-subtitle" data-reveal>Types of Products Tested: PanelSeT SM, PanelSeT PLM and ClimaSys portfolios.</p>
         </header>
 
@@ -730,7 +781,7 @@
 
         <header class="env-header">
           <p class="kicker" data-reveal>Environments</p>
-          <h2 id="environments-title"><span>Product families / environments</span></h2>
+          <h2 id="environments-title" data-title-reveal>Product families / environments</h2>
         </header>
 
         <p class="env-statement">
@@ -832,6 +883,6 @@
       <span class="counter" id="counter">01 / 13</span>
     </nav>
 
-    <script src="app.js?v=slide7-description-20260520"></script>
+    <script src="app.js?v=env-focus-20260521"></script>
   </body>
 </html>

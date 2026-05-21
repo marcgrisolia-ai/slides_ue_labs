@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 :root {
   --black: #05090a;
   --deep: #080c0e;
@@ -13,7 +15,7 @@
   --line: rgba(255, 255, 255, 0.13);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-inout: cubic-bezier(0.7, 0, 0.22, 1);
-  font-family: Aptos, Inter, Arial, Helvetica, sans-serif;
+  font-family: Poppins, Aptos, Inter, Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -29,8 +31,11 @@ body {
 }
 
 body {
+  display: grid;
+  place-items: center;
   overflow: hidden;
-  min-width: 1180px;
+  width: 100vw;
+  height: 100svh;
 }
 
 button {
@@ -39,12 +44,15 @@ button {
 
 .stage,
 .slide {
-  width: max(100vw, 1180px);
-  height: 100svh;
+  width: 100%;
+  height: 100%;
 }
 
 .stage {
   position: relative;
+  width: min(100vw, calc(100svh * 16 / 9));
+  height: min(100svh, calc(100vw * 9 / 16));
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--deep);
 }
@@ -53,6 +61,7 @@ button {
 .stage:-webkit-full-screen {
   width: 100vw;
   height: 100vh;
+  aspect-ratio: 16 / 9;
 }
 
 .slide {
@@ -366,6 +375,120 @@ h2 {
   transform: translateY(18px);
 }
 
+.snapshot-constellation {
+  position: absolute;
+  left: clamp(104px, 7vw, 136px);
+  top: clamp(344px, 35.5vh, 400px);
+  width: min(620px, 34vw);
+  height: clamp(300px, 34vh, 360px);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.constellation-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  z-index: 0;
+}
+
+.constellation-link {
+  fill: none;
+  stroke: rgba(61, 205, 88, 0.58);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  filter: drop-shadow(0 0 5px rgba(61, 205, 88, 0.28));
+}
+
+.constellation-node {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  align-items: center;
+  min-width: 188px;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(18px) scale(0.96);
+  filter: blur(5px);
+  z-index: 1;
+}
+
+.constellation-node b {
+  grid-row: 1 / 3;
+  position: relative;
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow:
+    0 14px 26px rgba(0, 0, 0, 0.24),
+    0 0 0 6px rgba(255, 255, 255, 0.035);
+}
+
+.constellation-node b::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.constellation-node span {
+  align-self: end;
+  font-size: clamp(18px, 1.18vw, 23px);
+  line-height: 1.05;
+}
+
+.constellation-node small {
+  align-self: start;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: clamp(13px, 0.92vw, 17px);
+  line-height: 1;
+}
+
+.constellation-su {
+  left: 7%;
+  top: 5%;
+}
+
+.constellation-su b {
+  background: #2098d5;
+}
+
+.constellation-ml {
+  left: 56%;
+  top: 34%;
+}
+
+.constellation-ml b {
+  background: #f28c00;
+}
+
+.constellation-kp {
+  left: 22%;
+  top: 70%;
+}
+
+.constellation-kp b {
+  background: #884bf2;
+}
+
 .plant-note,
 .cert-note {
   position: absolute;
@@ -560,15 +683,7 @@ h2 {
 }
 
 .org-step span::before {
-  content: "LEVEL 0" counter(org-step);
-  display: block;
-  margin: 0 0 clamp(10px, 0.9vw, 14px);
-  color: var(--green);
-  font-size: clamp(11px, 0.68vw, 13px);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  content: none;
 }
 
 .org-step:not(:last-child)::before {
@@ -620,7 +735,7 @@ h2 {
 }
 
 .org-step.is-current span::before {
-  color: #a7f4ae;
+  content: none;
 }
 
 .org-formula {
@@ -779,6 +894,11 @@ body.ready .slide.is-active.slide-org .slide-footer {
   stroke-width: 1.2;
 }
 
+.gov-link.branch {
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 7px rgba(61, 205, 88, 0.22));
+}
+
 .gov-node {
   position: absolute;
   display: grid;
@@ -905,7 +1025,7 @@ body.ready .slide.is-active.slide-org .slide-footer {
 
 .lab-token {
   position: absolute;
-  top: 342px;
+  top: 420px;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
@@ -1032,16 +1152,28 @@ body.ready .slide.is-active .gov-link.branch {
   animation-delay: 4200ms;
 }
 
+body.ready .slide.is-active .gov-link.lab-route-su {
+  animation-delay: 4140ms;
+}
+
+body.ready .slide.is-active .gov-link.lab-route-ml {
+  animation-delay: 4260ms;
+}
+
+body.ready .slide.is-active .gov-link.lab-route-kp {
+  animation-delay: 4380ms;
+}
+
 .lab-su {
-  --lab-delay: 4580ms;
+  --lab-delay: 4520ms;
 }
 
 .lab-ml {
-  --lab-delay: 4700ms;
+  --lab-delay: 4640ms;
 }
 
 .lab-kp {
-  --lab-delay: 4820ms;
+  --lab-delay: 4760ms;
 }
 
 body.ready .slide.is-active .lab-token {
@@ -1820,6 +1952,30 @@ body.ready .slide.is-active.slide-network .slide-footer {
   transform: translateY(18px);
 }
 
+.capellades-steel-model {
+  position: relative;
+  display: block;
+  width: min(460px, 108%);
+  height: 270px;
+  background: transparent;
+  pointer-events: none;
+  opacity: 0;
+  filter: drop-shadow(0 28px 28px rgba(0, 0, 0, 0.32));
+  transform: translateY(16px) scale(1.06);
+  transition: opacity 320ms ease;
+  --poster-color: transparent;
+  --progress-bar-color: var(--green);
+  --progress-mask: rgba(61, 205, 88, 0.18);
+}
+
+.capellades-steel-model:not(:defined) {
+  display: none;
+}
+
+.capellades-steel-model.is-loaded {
+  opacity: 1;
+}
+
 .capellades-certificate-card {
   min-height: clamp(430px, 48vh, 520px);
   display: grid;
@@ -2033,7 +2189,7 @@ body.ready .slide.is-active .lab-identity {
   display: grid;
   grid-template-columns: minmax(330px, 0.96fr) minmax(220px, 0.54fr);
   column-gap: clamp(20px, 1.8vw, 34px);
-  row-gap: clamp(20px, 2.2vh, 30px);
+  row-gap: clamp(22px, 2.6vh, 34px);
   align-items: stretch;
 }
 
@@ -2050,8 +2206,8 @@ body.ready .slide.is-active .lab-identity {
 .product-header h3 {
   margin: 12px 0 0;
   color: var(--text);
-  width: min(720px, 43vw);
-  font-size: clamp(48px, 3.7vw, 68px);
+  width: min(840px, 50vw);
+  font-size: clamp(44px, 3.4vw, 62px);
   font-weight: 400;
   line-height: 0.98;
   opacity: 0;
@@ -2063,10 +2219,10 @@ body.ready .slide.is-active .lab-identity {
 }
 
 .product-copy {
-  width: min(640px, 40vw);
+  width: min(700px, 43vw);
   margin: 16px 0 0;
   color: rgba(214, 222, 223, 0.78);
-  font-size: clamp(18px, 1.14vw, 23px);
+  font-size: clamp(17px, 1.04vw, 21px);
   line-height: 1.18;
   opacity: 0;
   transform: translateY(20px);
@@ -2074,59 +2230,57 @@ body.ready .slide.is-active .lab-identity {
 
 .product-validation {
   position: relative;
-  min-height: 128px;
+  min-height: 74px;
   display: grid;
-  grid-template-columns: 68px 1fr;
-  column-gap: 22px;
+  grid-template-columns: 52px 1fr;
+  column-gap: 16px;
   align-items: center;
   margin: 0;
-  padding: 18px 24px;
-  border: 1px solid rgba(242, 140, 0, 0.86);
-  background: rgba(13, 19, 21, 0.96);
-  box-shadow:
-    inset 0 0 0 1px rgba(242, 140, 0, 0.08),
-    0 22px 46px rgba(0, 0, 0, 0.24);
+  padding: 0 0 0 2px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
   opacity: 0;
-  transform: translateX(28px);
+  transform: translateY(20px);
 }
 
 .product-validation::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  background: #f28c00;
-  box-shadow: 0 0 18px rgba(242, 140, 0, 0.28);
+  left: 68px;
+  right: 0;
+  bottom: -10px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(242, 140, 0, 0.58), transparent);
+  box-shadow: none;
 }
 
 .product-validation b {
-  width: 62px;
+  width: 46px;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  border: 3px solid #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.92);
   border-radius: 50%;
   background: #f28c00;
   color: #ffffff;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 500;
 }
 
 .product-validation span {
   display: block;
   color: var(--text);
-  font-size: clamp(22px, 1.45vw, 30px);
+  font-size: clamp(19px, 1.16vw, 23px);
   line-height: 1.04;
 }
 
 .product-validation small {
   display: block;
-  margin-top: 7px;
+  margin-top: 5px;
   color: var(--muted);
-  font-size: clamp(15px, 0.96vw, 19px);
-  line-height: 1.15;
+  font-size: clamp(13px, 0.82vw, 16px);
+  line-height: 1.18;
 }
 
 .product-family {
@@ -2175,7 +2329,7 @@ body.ready .slide.is-active .lab-identity {
 }
 
 .product-family-transparent {
-  min-height: 128px;
+  min-height: 94px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -2192,6 +2346,29 @@ body.ready .slide.is-active .lab-identity {
   filter: drop-shadow(0 22px 24px rgba(0, 0, 0, 0.28));
 }
 
+.product-family-model {
+  display: block;
+  width: min(360px, 112%);
+  height: 146px;
+  background: transparent;
+  pointer-events: none;
+  opacity: 0;
+  filter: drop-shadow(0 20px 22px rgba(0, 0, 0, 0.24));
+  transform: translateX(-10px) scale(1.02);
+  transition: opacity 320ms ease;
+  --poster-color: transparent;
+  --progress-bar-color: #f28c00;
+  --progress-mask: rgba(242, 140, 0, 0.18);
+}
+
+.product-family-model:not(:defined) {
+  display: none;
+}
+
+.product-family-model.is-loaded {
+  opacity: 1;
+}
+
 .product-tiles {
   grid-column: 1 / -1;
   position: relative;
@@ -2200,35 +2377,36 @@ body.ready .slide.is-active .lab-identity {
   bottom: auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 1.6vw, 28px);
+  gap: clamp(18px, 1.5vw, 26px);
+  padding-top: 30px;
 }
 
 .product-tiles::before {
   content: "Representative examples from a broader ClimaSys validation scope";
   position: absolute;
   left: 0;
-  top: -24px;
-  color: rgba(242, 140, 0, 0.92);
-  font-size: clamp(11px, 0.74vw, 14px);
+  top: 0;
+  color: rgba(242, 140, 0, 0.76);
+  font-size: clamp(10px, 0.66vw, 12px);
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   line-height: 1;
   text-transform: uppercase;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(6px);
 }
 
 .product-tile {
   position: relative;
-  min-height: 188px;
+  min-height: 178px;
   display: grid;
-  grid-template-rows: 132px auto;
+  grid-template-rows: 128px auto;
   align-items: end;
   justify-items: center;
-  padding: 16px 14px 18px;
-  border: 1px solid rgba(242, 140, 0, 0.34);
-  background: rgba(13, 19, 21, 0.96);
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.24);
+  padding: 14px 14px 16px;
+  border: 1px solid rgba(242, 140, 0, 0.2);
+  background: rgba(8, 14, 16, 0.76);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
   opacity: 0;
   transform: translateY(28px);
 }
@@ -2236,16 +2414,17 @@ body.ready .slide.is-active .lab-identity {
 .product-tile::before {
   content: "";
   position: absolute;
-  left: 16px;
-  right: 16px;
+  left: 50%;
   top: 0;
-  height: 2px;
-  background: rgba(242, 140, 0, 0.82);
+  width: min(120px, 44%);
+  height: 1px;
+  background: rgba(242, 140, 0, 0.68);
+  transform: translateX(-50%);
 }
 
 .product-tile span {
   color: rgba(237, 241, 241, 0.92);
-  font-size: clamp(15px, 1vw, 19px);
+  font-size: clamp(14px, 0.9vw, 17px);
   line-height: 1.1;
   text-align: center;
   font-weight: 600;
@@ -2253,8 +2432,8 @@ body.ready .slide.is-active .lab-identity {
 
 .product-image {
   position: relative;
-  width: 172px;
-  height: 126px;
+  width: 158px;
+  height: 120px;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -2323,7 +2502,7 @@ body.ready .slide.is-active .lab-identity {
 }
 
 .product-tile-cooling .product-model {
-  transform: translateY(-32px) scale(0.76);
+  transform: translateY(-42px) scale(0.7);
 }
 
 .product-tile-fan .product-image img {
@@ -2339,11 +2518,11 @@ body.ready .slide.is-active .lab-identity {
 }
 
 .product-tile-control .product-model {
-  transform: translateY(-8px) scale(0.9);
+  transform: translateY(-22px) scale(0.82);
 }
 
 body.ready .slide.is-active .product-validation {
-  animation: revealRight 700ms var(--ease-out) 980ms forwards;
+  animation: revealUp 700ms var(--ease-out) 980ms forwards;
 }
 
 body.ready .slide.is-active .product-family {
@@ -2367,10 +2546,11 @@ body.ready .slide.is-active .product-tile:nth-child(3) {
 }
 
 body.ready .slide.is-active .product-tiles::before {
-  animation: revealUp 560ms var(--ease-out) 2100ms forwards;
+  animation: revealUp 560ms var(--ease-out) 1540ms forwards;
 }
 
 .slide-scope {
+  font-family: Poppins, Aptos, Inter, Arial, Helvetica, sans-serif;
   padding: clamp(54px, 5.6vw, 104px);
 }
 
@@ -2384,11 +2564,11 @@ body.ready .slide.is-active .product-tiles::before {
   position: absolute;
   left: clamp(72px, 6vw, 110px);
   top: clamp(58px, 5.6vw, 76px);
-  width: min(1160px, 70vw);
+  width: min(1240px, 74vw);
 }
 
 .scope-header h2 {
-  font-size: clamp(52px, 4.1vw, 78px);
+  font-size: clamp(50px, 3.65vw, 70px);
   line-height: 1;
   opacity: 0;
   transform: translateY(18px);
@@ -2399,6 +2579,11 @@ body.ready .slide.is-active .product-tiles::before {
 .closing-copy h2[data-split] {
   opacity: 1;
   transform: none;
+}
+
+.scope-header h2[data-title-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .scope-subtitle {
@@ -2504,6 +2689,7 @@ body.ready .slide.is-active .product-tiles::before {
 }
 
 .scope-lab span {
+  min-width: 0;
   color: var(--text);
   font-size: clamp(22px, 1.42vw, 28px);
   line-height: 1.1;
@@ -2524,6 +2710,15 @@ body.ready .slide.is-active .product-tiles::before {
   color: #884bf2;
 }
 
+.scope-kp {
+  gap: 20px;
+  padding: 0 24px;
+}
+
+.scope-kp span {
+  font-size: clamp(20px, 1.22vw, 24px);
+}
+
 .scope-su {
   grid-column: 2;
 }
@@ -2541,9 +2736,10 @@ body.ready .slide.is-active .product-tiles::before {
   align-self: center;
   justify-self: stretch;
   display: grid;
-  grid-template-columns: 56px 1fr;
+  grid-template-columns: 122px 58px;
+  justify-content: end;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   color: var(--green);
   font-size: clamp(22px, 1.42vw, 28px);
   line-height: 0.98;
@@ -2553,12 +2749,13 @@ body.ready .slide.is-active .product-tiles::before {
 
 .scope-row-label > span:last-child {
   display: block;
+  text-align: right;
 }
 
 .standard-logo,
 .standard-logo-pair {
-  width: 54px;
-  height: 54px;
+  width: 58px;
+  height: 58px;
 }
 
 .standard-logo {
@@ -2566,21 +2763,36 @@ body.ready .slide.is-active .product-tiles::before {
   object-fit: contain;
   padding: 5px;
   border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
   background: rgba(247, 250, 248, 0.94);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
 }
 
 .standard-logo-pair {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 4px;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
   align-items: center;
 }
 
 .standard-logo-pair .standard-logo {
-  width: 100%;
-  height: 25px;
-  padding: 3px;
+  width: 58px;
+  height: 58px;
+  justify-self: center;
+  padding: 5px;
+}
+
+.scope-row-ul {
+  grid-template-columns: 122px 58px;
+}
+
+.scope-row-ul .standard-logo-pair {
+  justify-self: end;
+  width: 122px;
+}
+
+.scope-row-label > .standard-logo {
+  justify-self: end;
 }
 
 .scope-row-iec {
@@ -2609,9 +2821,10 @@ body.ready .slide.is-active .product-tiles::before {
 }
 
 .scope-cell span {
-  display: block;
+  display: flex;
+  align-items: center;
   min-height: 30px;
-  padding: 6px 10px;
+  padding: 7px 10px;
   border: 2px solid currentColor;
   color: var(--text);
   font-size: clamp(13px, 0.86vw, 16px);
@@ -2619,6 +2832,10 @@ body.ready .slide.is-active .product-tiles::before {
   opacity: 0;
   transform: scaleX(0.86);
   transform-origin: left center;
+}
+
+.scope-cell-ul span {
+  min-height: 42px;
 }
 
 .scope-cell-su {
@@ -2999,13 +3216,13 @@ body.ready .slide.is-active .tested-subtitle {
   position: absolute;
   left: clamp(84px, 5.6vw, 108px);
   top: clamp(82px, 8.6vh, 92px);
-  width: min(1120px, 62vw);
+  width: min(1500px, 78vw);
 }
 
 .env-header h2 {
   margin: 36px 0 0;
   color: var(--text);
-  font-size: clamp(50px, 3.9vw, 78px);
+  font-size: clamp(48px, 3.45vw, 70px);
   font-weight: 400;
   line-height: 1.02;
   overflow: hidden;
@@ -3021,11 +3238,11 @@ body.ready .slide.is-active .tested-subtitle {
   position: absolute;
   left: clamp(84px, 5.6vw, 108px);
   top: clamp(260px, 25.2vh, 270px);
-  width: min(660px, 36vw);
+  width: min(860px, 43vw);
   margin: 0;
   color: var(--text);
-  font-size: clamp(26px, 1.65vw, 31px);
-  line-height: 1.86;
+  font-size: clamp(24px, 1.48vw, 29px);
+  line-height: 1.58;
 }
 
 .env-statement span {
@@ -3133,6 +3350,23 @@ body.ready .slide.is-active .tested-subtitle {
   background: rgba(16, 23, 27, 0.94);
   opacity: 0;
   transform: translateY(24px);
+  transform-origin: center;
+  transition:
+    opacity 420ms var(--ease-out),
+    filter 420ms var(--ease-out),
+    border-color 420ms var(--ease-out),
+    box-shadow 520ms var(--ease-out),
+    transform 560ms var(--ease-out);
+}
+
+.env-card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 0%, rgba(61, 205, 88, 0.16) 46%, transparent 72%);
+  opacity: 0;
+  transform: translateX(-34%);
 }
 
 .env-card h3 {
@@ -3154,24 +3388,96 @@ body.ready .slide.is-active .tested-subtitle {
   left: 0;
   top: 0;
   width: min(482px, 34vw);
+  --env-focus-x: 34px;
+  --env-focus-y: -34px;
+  transform-origin: left top;
 }
 
 .env-card-material {
   left: min(548px, 38vw);
   top: 0;
   width: min(540px, 38vw);
+  --env-focus-x: -28px;
+  --env-focus-y: -34px;
+  transform-origin: center top;
 }
 
 .env-card-thermal {
   left: 0;
   bottom: 0;
   width: min(600px, 42vw);
+  --env-focus-x: 42px;
+  --env-focus-y: 28px;
+  transform-origin: left bottom;
 }
 
 .env-card-reliability {
   left: min(696px, 48vw);
   bottom: 0;
   width: min(600px, 42vw);
+  --env-focus-x: -82px;
+  --env-focus-y: 28px;
+  transform-origin: right bottom;
+}
+
+.slide-environments.env-focus-active .env-route,
+.slide-environments.env-focus-active .env-route-line,
+.slide-environments.env-focus-active .env-node,
+.slide-environments.env-focus-active .env-card {
+  animation: none !important;
+}
+
+.slide-environments.env-focus-active .env-route {
+  opacity: 1;
+}
+
+.slide-environments.env-focus-active .env-route-line {
+  stroke: rgba(61, 205, 88, 0.28);
+  stroke-dashoffset: 0;
+  filter: none;
+  transition:
+    stroke 420ms var(--ease-out),
+    filter 420ms var(--ease-out);
+}
+
+.slide-environments.env-focus-active .env-node {
+  opacity: 0.28;
+  transform: scale(1);
+  transition:
+    opacity 420ms var(--ease-out),
+    fill 420ms var(--ease-out),
+    filter 420ms var(--ease-out),
+    transform 520ms var(--ease-out);
+}
+
+.slide-environments.env-focus-active .env-node.is-env-node-focused {
+  fill: rgba(61, 205, 88, 0.9);
+  opacity: 1;
+  transform: scale(1.55);
+  filter: drop-shadow(0 0 12px rgba(61, 205, 88, 0.58));
+}
+
+.slide-environments.env-focus-active .env-card {
+  opacity: 0.28;
+  filter: saturate(0.35) brightness(0.74);
+  transform: translateY(0) scale(0.96);
+}
+
+.slide-environments.env-focus-active .env-card.is-env-focused {
+  z-index: 8;
+  border-color: rgba(61, 205, 88, 0.64);
+  background: rgba(15, 25, 27, 0.98);
+  box-shadow:
+    0 24px 58px rgba(0, 0, 0, 0.34),
+    0 0 0 1px rgba(61, 205, 88, 0.14),
+    0 0 34px rgba(61, 205, 88, 0.16);
+  opacity: 1;
+  filter: none;
+  transform: translate(var(--env-focus-x), var(--env-focus-y)) scale(1.15);
+}
+
+.slide-environments.env-focus-active .env-card.is-env-focused::after {
+  animation: envFocusSweep 900ms var(--ease-out) forwards;
 }
 
 .slide-environments .slide-footer {
@@ -3191,35 +3497,35 @@ body.ready .slide.is-active .env-statement span {
 }
 
 body.ready .slide.is-active .env-statement span:nth-child(1) {
-  animation-delay: 760ms;
+  animation-delay: 1420ms;
 }
 
 body.ready .slide.is-active .env-statement span:nth-child(2) {
-  animation-delay: 920ms;
+  animation-delay: 1580ms;
 }
 
 body.ready .slide.is-active .env-statement span:nth-child(3) {
-  animation-delay: 1080ms;
+  animation-delay: 1740ms;
 }
 
 body.ready .slide.is-active .env-statement span:nth-child(4) {
-  animation-delay: 1240ms;
+  animation-delay: 1900ms;
 }
 
 body.ready .slide.is-active .env-hero {
-  animation: productHeroIn 860ms var(--ease-out) 1340ms forwards;
+  animation: productHeroIn 860ms var(--ease-out) 1760ms forwards;
 }
 
 body.ready .slide.is-active .env-hero img {
-  animation: photoSettle 2600ms var(--ease-out) 1340ms forwards;
+  animation: photoSettle 2600ms var(--ease-out) 1760ms forwards;
 }
 
 body.ready .slide.is-active .env-route {
-  animation: fadeIn 360ms var(--ease-out) 1540ms forwards;
+  animation: fadeIn 360ms var(--ease-out) 1940ms forwards;
 }
 
 body.ready .slide.is-active .env-route-line {
-  animation: drawPath 1700ms var(--ease-out) 1600ms forwards;
+  animation: drawPath 1700ms var(--ease-out) 2000ms forwards;
 }
 
 body.ready .slide.is-active .env-node {
@@ -3227,19 +3533,19 @@ body.ready .slide.is-active .env-node {
 }
 
 body.ready .slide.is-active .env-node-a {
-  animation-delay: 1920ms;
+  animation-delay: 2320ms;
 }
 
 body.ready .slide.is-active .env-node-b {
-  animation-delay: 2160ms;
+  animation-delay: 2560ms;
 }
 
 body.ready .slide.is-active .env-node-c {
-  animation-delay: 2440ms;
+  animation-delay: 2840ms;
 }
 
 body.ready .slide.is-active .env-node-d {
-  animation-delay: 2740ms;
+  animation-delay: 3140ms;
 }
 
 body.ready .slide.is-active .env-card {
@@ -3247,7 +3553,7 @@ body.ready .slide.is-active .env-card {
 }
 
 body.ready .slide.is-active .env-card-industrial {
-  animation-delay: 1780ms;
+  animation-delay: 2180ms;
 }
 
 body.ready .slide.is-active .env-card-thermal {
@@ -3627,12 +3933,184 @@ body.ready .slide.is-active [data-reveal] {
   animation: revealUp 760ms var(--ease-out) forwards;
 }
 
+body.ready .slide.is-active.slide-scope .scope-header .kicker {
+  animation: revealUp 620ms var(--ease-out) 300ms forwards;
+}
+
+body.ready .slide.is-active.slide-scope .scope-header h2[data-title-reveal] {
+  animation: labTitleLineIn 720ms var(--ease-out) 680ms forwards;
+}
+
+body.ready .slide.is-active.slide-scope .scope-subtitle {
+  animation: revealUp 680ms var(--ease-out) 1360ms forwards;
+}
+
+body.ready .slide.is-active.slide-products-tested .tested-header .kicker {
+  animation: revealUp 620ms var(--ease-out) 300ms forwards;
+}
+
+body.ready .slide.is-active.slide-products-tested .tested-header h2[data-title-reveal] {
+  animation: labTitleLineIn 720ms var(--ease-out) 680ms forwards;
+}
+
+body.ready .slide.is-active.slide-products-tested .tested-subtitle {
+  animation: revealUp 680ms var(--ease-out) 1360ms forwards;
+}
+
+body.ready .slide.is-active.slide-environments .env-header .kicker {
+  animation: revealUp 620ms var(--ease-out) 300ms forwards;
+}
+
+body.ready .slide.is-active.slide-environments .env-header h2[data-title-reveal] {
+  animation: labTitleLineIn 720ms var(--ease-out) 680ms forwards;
+}
+
+body.ready .slide.is-active.slide-capellades .lab-profile-header .kicker {
+  animation-delay: 360ms;
+}
+
+body.ready .slide.is-active.slide-capellades .lab-profile-header h2 {
+  animation-delay: 640ms;
+}
+
+body.ready .slide.is-active.slide-capellades .lab-fact:nth-child(1) {
+  animation-delay: 1820ms;
+}
+
+body.ready .slide.is-active.slide-capellades .lab-fact:nth-child(2) {
+  animation-delay: 1980ms;
+}
+
+body.ready .slide.is-active.slide-capellades .lab-description {
+  animation: labDescriptionIn 760ms var(--ease-out) 2240ms forwards;
+}
+
+body.ready .slide.is-active.slide-capellades .capellades-product-card {
+  animation: revealUp 760ms var(--ease-out) 2700ms forwards;
+}
+
+body.ready .slide.is-active.slide-capellades .capellades-certificate-card {
+  animation: revealUp 760ms var(--ease-out) 3040ms forwards;
+}
+
+body.ready .slide.is-active.slide-capellades .certificate-frame {
+  animation: certificateIn 900ms var(--ease-out) 3440ms forwards;
+}
+
+body.ready .slide.is-active.slide-capellades .certificate-frame::before {
+  animation: certificateBorderIn 640ms var(--ease-out) 4040ms forwards;
+}
+
+body.ready .slide.is-active.slide-capellades .capellades-product-card figure::before {
+  animation: lineIn 760ms var(--ease-out) 3620ms forwards;
+}
+
+body.ready .slide.is-active.slide-molins .lab-profile-header .kicker {
+  animation-delay: 360ms;
+}
+
+body.ready .slide.is-active.slide-molins .lab-fact:nth-child(1) {
+  animation-delay: 1820ms;
+}
+
+body.ready .slide.is-active.slide-molins .lab-identity {
+  animation: revealUp 720ms var(--ease-out) 2240ms forwards;
+}
+
+body.ready .slide.is-active.slide-molins .product-header .kicker {
+  animation: revealUp 620ms var(--ease-out) 1900ms forwards;
+}
+
+body.ready .slide.is-active.slide-molins .product-header h3 {
+  animation: revealUp 720ms var(--ease-out) 2080ms forwards;
+}
+
+body.ready .slide.is-active.slide-molins .product-copy {
+  animation: revealUp 680ms var(--ease-out) 2380ms forwards;
+}
+
+body.ready .slide.is-active.slide-molins .product-validation {
+  animation: revealUp 700ms var(--ease-out) 2780ms forwards;
+}
+
+body.ready .slide.is-active.slide-molins .product-family {
+  animation: productHeroIn 780ms var(--ease-out) 2960ms forwards;
+}
+
+body.ready .slide.is-active.slide-molins .product-tiles::before {
+  animation: revealUp 560ms var(--ease-out) 3200ms forwards;
+}
+
+body.ready .slide.is-active.slide-molins .product-tile:nth-child(1) {
+  animation-delay: 3360ms;
+}
+
+body.ready .slide.is-active.slide-molins .product-tile:nth-child(2) {
+  animation-delay: 3500ms;
+}
+
+body.ready .slide.is-active.slide-molins .product-tile:nth-child(3) {
+  animation-delay: 3640ms;
+}
+
 body.ready .slide.is-active.slide-snapshot .kicker {
   animation-delay: 360ms;
 }
 
 body.ready .slide.is-active.slide-snapshot .snapshot-subtitle {
   animation-delay: 1380ms;
+}
+
+body.ready .slide.is-active.slide-snapshot .snapshot-constellation {
+  animation: revealUp 720ms var(--ease-out) 980ms forwards;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-link {
+  animation: drawPath 980ms var(--ease-out) forwards;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-link-su-ml {
+  animation-delay: 1320ms;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-link-ml-kp {
+  animation-delay: 1480ms;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-link-kp-su {
+  animation-delay: 1640ms;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-node {
+  animation: constellationNodeIn 620ms var(--ease-out) forwards;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-su {
+  animation-delay: 1560ms;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-ml {
+  animation-delay: 1720ms;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-kp {
+  animation-delay: 1880ms;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-node b::after {
+  animation: constellationPulse 960ms var(--ease-out) 1 forwards;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-su b::after {
+  animation-delay: 1880ms;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-ml b::after {
+  animation-delay: 2040ms;
+}
+
+body.ready .slide.is-active.slide-snapshot .constellation-kp b::after {
+  animation-delay: 2200ms;
 }
 
 body.ready .slide.is-active.slide-snapshot .plant-note {
@@ -3710,6 +4188,10 @@ body.replay [data-reveal],
 body.replay .signal-lines,
 body.replay .signal-lines span,
 body.replay .snapshot-glow,
+body.replay .snapshot-constellation,
+body.replay .constellation-link,
+body.replay .constellation-node,
+body.replay .constellation-node b::after,
 body.replay .metric-card,
 body.replay .metric-card strong::after,
 body.replay .org-step,
@@ -3795,6 +4277,8 @@ body.instant .slide.is-active [data-title-reveal],
 body.instant .slide.is-active [data-reveal],
 body.instant .slide.is-active .signal-lines,
 body.instant .slide.is-active .snapshot-glow,
+body.instant .slide.is-active .snapshot-constellation,
+body.instant .slide.is-active .constellation-node,
 body.instant .slide.is-active .metric-card,
 body.instant .slide.is-active .org-step,
 body.instant .slide.is-active .org-step span,
@@ -3911,6 +4395,12 @@ body.instant .slide.is-active .gov-link {
 }
 
 body.instant .slide.is-active .route {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  animation: none !important;
+}
+
+body.instant .slide.is-active .constellation-link {
   opacity: 1;
   stroke-dashoffset: 0;
   animation: none !important;
@@ -4068,6 +4558,29 @@ body.instant .slide.is-active.slide-snapshot .cert-note span {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
+  }
+}
+
+@keyframes constellationNodeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes constellationPulse {
+  0% {
+    opacity: 0.28;
+    transform: scale(0.9);
+  }
+  62% {
+    opacity: 0.14;
+    transform: scale(1.18);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
   }
 }
 
@@ -4248,6 +4761,20 @@ body.instant .slide.is-active.slide-snapshot .cert-note span {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes envFocusSweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-38%);
+  }
+  28% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(38%);
   }
 }
 

@@ -9,8 +9,11 @@ const nextButton = document.querySelector("#next");
 const counter = document.querySelector("#counter");
 
 let current = 0;
+let slideActivatedAt = 0;
+let environmentFocusStep = 0;
 const productModelTimers = new WeakMap();
 const productModelFrames = new WeakMap();
+const ENVIRONMENT_FOCUS_READY_MS = 3900;
 
 function splitDisplayText() {
   document.querySelectorAll("[data-split]").forEach((node) => {
@@ -48,11 +51,13 @@ function slideIndexFromHash() {
 function replayIntro() {
   body.classList.add("replay");
   body.classList.remove("ready");
+  resetEnvironmentFocus(slides[current]);
   resetCounters(slides[current]);
   resetProductModels(slides[current]);
 
   window.setTimeout(() => {
     body.classList.remove("replay");
+    slideActivatedAt = performance.now();
     requestAnimationFrame(() => body.classList.add("ready"));
     animateCounters(slides[current]);
     activateProductModels(slides[current]);
@@ -127,7 +132,9 @@ function goToSlide(index, options = {}) {
   const nextIndex = Math.max(0, Math.min(slides.length - 1, index));
   const previousSlide = slides[current];
   resetProductModels(previousSlide);
+  resetEnvironmentFocus(previousSlide);
   current = nextIndex;
+  slideActivatedAt = performance.now();
 
   slides.forEach((slide, slideIndex) => {
     slide.classList.toggle("is-active", slideIndex === current);
@@ -144,11 +151,13 @@ function goToSlide(index, options = {}) {
 
   resetCounters(slides[current]);
   resetProductModels(slides[current]);
+  resetEnvironmentFocus(slides[current]);
   if (!options.immediate) {
     body.classList.add("replay");
     body.classList.remove("ready");
     window.setTimeout(() => {
       body.classList.remove("replay");
+      slideActivatedAt = performance.now();
       body.classList.add("ready");
       animateCounters(slides[current]);
       activateProductModels(slides[current]);
@@ -286,6 +295,91 @@ function activateProductModels(slide) {
   slide.querySelectorAll("[data-product-model]").forEach(animateProductModel);
 }
 
+function isEnvironmentSlide(slide = slides[current]) {
+  return Boolean(slide?.classList.contains("slide-environments"));
+}
+
+function resetEnvironmentFocus(slide) {
+  if (!slide || !isEnvironmentSlide(slide)) return;
+  if (slide === slides[current]) {
+    environmentFocusStep = 0;
+  }
+  slide.classList.remove("env-focus-active");
+  delete slide.dataset.envFocusStep;
+  slide.querySelectorAll(".env-card").forEach((card) => {
+    card.classList.remove("is-env-focused");
+    card.removeAttribute("aria-current");
+  });
+  slide.querySelectorAll(".env-node").forEach((node) => {
+    node.classList.remove("is-env-node-focused");
+  });
+}
+
+function setEnvironmentFocusStep(step) {
+  const slide = slides[current];
+  if (!isEnvironmentSlide(slide)) return false;
+
+  const cards = [...slide.querySelectorAll(".env-card")];
+  const nodes = [...slide.querySelectorAll(".env-node")];
+  const nextStep = Math.max(0, Math.min(cards.length, step));
+  environmentFocusStep = nextStep;
+
+  slide.classList.toggle("env-focus-active", nextStep > 0);
+  if (nextStep > 0) {
+    slide.dataset.envFocusStep = String(nextStep);
+  } else {
+    delete slide.dataset.envFocusStep;
+  }
+
+  cards.forEach((card, index) => {
+    const active = index === nextStep - 1;
+    card.classList.toggle("is-env-focused", active);
+    if (active) {
+      card.setAttribute("aria-current", "step");
+    } else {
+      card.removeAttribute("aria-current");
+    }
+  });
+
+  nodes.forEach((node, index) => {
+    node.classList.toggle("is-env-node-focused", index === nextStep - 1);
+  });
+
+  return true;
+}
+
+function environmentFocusReady() {
+  return body.classList.contains("instant") || performance.now() - slideActivatedAt >= ENVIRONMENT_FOCUS_READY_MS;
+}
+
+function advanceEnvironmentFocus() {
+  const slide = slides[current];
+  if (!isEnvironmentSlide(slide)) return false;
+
+  const cardCount = slide.querySelectorAll(".env-card").length;
+  if (environmentFocusStep >= cardCount) return false;
+  if (!environmentFocusReady()) return true;
+
+  setEnvironmentFocusStep(environmentFocusStep + 1);
+  return true;
+}
+
+function rewindEnvironmentFocus() {
+  if (!isEnvironmentSlide() || environmentFocusStep <= 0) return false;
+  setEnvironmentFocusStep(environmentFocusStep - 1);
+  return true;
+}
+
+function navigateForward() {
+  if (advanceEnvironmentFocus()) return;
+  goToSlide(current + 1);
+}
+
+function navigateBackward() {
+  if (rewindEnvironmentFocus()) return;
+  goToSlide(current - 1);
+}
+
 function updatePointerParallax(event) {
   const rect = stage.getBoundingClientRect();
   const x = (event.clientX - rect.left) / rect.width - 0.5;
@@ -313,19 +407,26 @@ fullscreenButton.addEventListener("click", () => {
     window.setTimeout(() => fullscreenButton.classList.remove("is-denied"), 900);
   });
 });
-prevButton.addEventListener("click", () => goToSlide(current - 1));
-nextButton.addEventListener("click", () => goToSlide(current + 1));
+prevButton.addEventListener("click", navigateBackward);
+nextButton.addEventListener("click", navigateForward);
 document.addEventListener("fullscreenchange", updateFullscreenState);
 document.addEventListener("webkitfullscreenchange", updateFullscreenState);
+
+stage.addEventListener("click", (event) => {
+  if (!isEnvironmentSlide()) return;
+  if (event.target instanceof Element && event.target.closest(".controls, button, a")) return;
+  event.preventDefault();
+  navigateForward();
+});
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight" || event.key === "ArrowDown" || event.key === "PageDown" || event.key === " ") {
     event.preventDefault();
-    goToSlide(current + 1);
+    navigateForward();
   }
   if (event.key === "ArrowLeft" || event.key === "ArrowUp" || event.key === "PageUp") {
     event.preventDefault();
-    goToSlide(current - 1);
+    navigateBackward();
   }
   if (event.key.toLowerCase() === "r") {
     replayIntro();
