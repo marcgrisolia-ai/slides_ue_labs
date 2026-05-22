@@ -1,0 +1,93 @@
+    Useful Technical Information                                                                                                                                    www.se.com
+
+
+    Enclosures and Thermal Management Systems
+    Certifications
+     Range                 Empty assemblies                                                                                                              Equipped assemblies
+                           Empty assemblies Standards                         Marine environment         Enclosures installed in    Outdoor              Low-voltage
+                           for low-voltage  for industrial                    classification or approval a potentially explosive    heavy-duty           switchgear and
+                           switchgear       equipment and                     for protection and         atmosphere                 enclosures           controlgear
+                                            UL classification                 resistance to vibrations                                                   assemblies
+                           Standard/Directive
+                           IEC 62208                 UL508A and CAN           Compliance with             European directive    IEC 61439-5              IEC61439-1&2
+                                                     CSA C22-2                requirements of certified   no. 2014/34/UE        ISO 12944-6
+                                                     no. 14                   bodies                      EN60079-0 / EN60079-7 IEC 61969-3
+                                                                                                          EN60079-3 / EN60529
+     PanelSeT - Steel and Stainless Steel Enclosures
+     SBM
+     S3D                                  (6)
+
+     CRN                               (6)
+
+     S3DEX
+     S3HF
+     S3HD                              (6)
+
+     S3CM
+     SM                                   (6)
+
+     SFN                                  (6)
+
+     SFHD                                 (6)
+
+     PrismaSeT HD                      (6)
+
+     SBX
+     S3X
+     SMX                                                                                   (3)
+
+     SFX                               (3)                                                 (3)
+
+     PanelSeT - Polyester Enclosures
+     TBS/TBP                                                      (1)
+
+     PLS
+
+     PLM                                  (6)
+
+     PLA                                  (6)
+
+     PLAT                                 (6)
+
+     PLAZ                                 (6)
+
+     PLAZT                                (6)
+
+     PLD
+
+     PHD                               (6)                                                                                                     (2)
+
+     ClimaSys    (4)
+
+
+     CV
+     CU
+     CE
+     CR                                                           (5)
+8
+     CC
+
+    (1)
+        Only TBP.                                                                                 (5)
+                                                                                                      The
+                                                                                                         insulated and aluminum resistance heaters of
+    (2)
+        ISO 12944-6 only applies to the PanelSeT enclosures.                                          12-24 V DC and 270-420 V AC are not certified
+    (3)
+        Only for single-door versions                                                             (6)
+                                                                                                      Certificate by DEKRA
+    (4)
+          EAC-compliant                                                                           For other certifications and declarations of conformity please consult us.
+
+
+    Official Certification Body
+     Bureau            LCIE                     Bureau Veritas          TUV Rheinland    Underwriters      Laboratorio Oficial     DNV-GL            Dekra         Asefa
+     Veritas           (Bureau Veritas)         Marine Division         Group            Laboratories      J.M. Madariaga
+
+
+
+
+    Technical changes reserved. Information provided without guarantee. Images are for illustrative purposes only.
+
+    610                                                                                                                    Enclosures 2025 | Useful Technical Information
+
