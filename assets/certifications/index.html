@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Schneider Electric certification portfolio interface for certified enclosures, thermal management, and technical standards."
+    >
+    <title>Schneider Electric | Certifications</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main id="certification-app" class="certification-app" data-certification-app>
+      <header class="certification-hero" data-certification-hero>
+        <nav class="certification-nav" aria-label="Certification navigation">
+          <a class="certification-brand" href="#" aria-label="Schneider Electric certifications home">
+            <img
+              class="certification-brand__logo"
+              src="../processed/schneider_logo_white.png"
+              alt="Schneider Electric"
+            >
+          </a>
+          <div class="certification-nav__meta" aria-label="Portfolio context">
+            <span>Universal Enclosures</span>
+            <span>2026 Certification Matrix</span>
+          </div>
+        </nav>
+
+        <div class="certification-hero__content">
+          <section class="certification-hero__copy" aria-labelledby="certification-hero-title">
+            <p class="certification-eyebrow">Certified technical portfolio</p>
+            <h1 id="certification-hero-title">Global approvals for demanding electrical environments.</h1>
+            <p class="certification-hero__lead">
+              A dark, precise Schneider Electric workspace for mapping standards, product ranges,
+              regions, and approval bodies across the enclosure portfolio.
+            </p>
+            <div class="certification-hero__actions" aria-label="Certification scope">
+              <a class="certification-cta certification-cta--primary" href="#certification-board">
+                Explore approvals
+              </a>
+              <a class="certification-cta certification-cta--ghost" href="#certification-standards">
+                View standards
+              </a>
+            </div>
+          </section>
+
+          <aside class="certification-hero__visual" aria-label="Schneider Electric product certification">
+            <img
+              class="certification-hero__image"
+              src="../processed/product_portfolio_hero.jpg"
+              alt="Schneider Electric electrical enclosure portfolio"
+            >
+            <div class="certification-hero__overlay">
+              <span>Validated ranges</span>
+              <strong>PanelSeT · Spacial · ClimaSys</strong>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <section class="certification-kpis" aria-label="Certification portfolio highlights">
+        <article class="certification-kpi" data-certification-kpi="bodies">
+          <span class="certification-kpi__value">07</span>
+          <span class="certification-kpi__label">Approval bodies</span>
+        </article>
+        <article class="certification-kpi" data-certification-kpi="families">
+          <span class="certification-kpi__value">24</span>
+          <span class="certification-kpi__label">Product families</span>
+        </article>
+        <article class="certification-kpi" data-certification-kpi="standards">
+          <span class="certification-kpi__value">IEC · UL · CSA</span>
+          <span class="certification-kpi__label">Core standards</span>
+        </article>
+        <article class="certification-kpi" data-certification-kpi="coverage">
+          <span class="certification-kpi__value">EU · NA · Marine</span>
+          <span class="certification-kpi__label">Market coverage</span>
+        </article>
+      </section>
+
+      <section id="certification-standards" class="certification-standards" aria-labelledby="standards-title">
+        <div class="certification-section-heading">
+          <p class="certification-eyebrow">Reference standards</p>
+          <h2 id="standards-title">Built for audit-ready technical comparison.</h2>
+        </div>
+        <div class="certification-standards__rail" data-certification-standards>
+          <article class="certification-standard" data-certification-standard="ul">
+            <img src="../STANDARD_ASSETS/ul-logo-png-transparent.png" alt="UL">
+            <span>UL listed ranges</span>
+          </article>
+          <article class="certification-standard" data-certification-standard="iec">
+            <img src="../STANDARD_ASSETS/IEC.png" alt="IEC">
+            <span>IEC compliance</span>
+          </article>
+          <article class="certification-standard" data-certification-standard="iso">
+            <img src="../STANDARD_ASSETS/ISO-Logo-1.png" alt="ISO">
+            <span>Quality systems</span>
+          </article>
+          <article class="certification-standard" data-certification-standard="csa">
+            <img src="../STANDARD_ASSETS/CSA.png" alt="CSA">
+            <span>North America</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="certification-board" class="certification-board" aria-labelledby="certification-board-title">
+        <div class="certification-board__header">
+          <div>
+            <p class="certification-eyebrow">Certification board</p>
+            <h2 id="certification-board-title">Approval matrix</h2>
+          </div>
+          <p class="certification-board__count" data-certification-count>6 approvals shown</p>
+        </div>
+
+        <div class="certification-filters" role="toolbar" aria-label="Certification filters" data-certification-filters>
+          <button class="certification-filter is-active" type="button" data-certification-filter="all">All</button>
+          <button class="certification-filter" type="button" data-certification-filter="ul">UL</button>
+          <button class="certification-filter" type="button" data-certification-filter="iec">IEC</button>
+          <button class="certification-filter" type="button" data-certification-filter="marine">Marine</button>
+          <button class="certification-filter" type="button" data-certification-filter="panelset">PanelSeT</button>
+          <button class="certification-filter" type="button" data-certification-filter="climasys">ClimaSys</button>
+        </div>
+
+        <div class="certification-grid" data-certification-grid>
+          <article class="certification-card" data-certification-card data-category="ul panelset north-america">
+            <div class="certification-card__media">
+              <img
+                class="certification-card__logo"
+                src="../STANDARD_ASSETS/ul-logo-png-transparent.png"
+                alt="UL certification mark"
+                data-card-logo
+              >
+            </div>
+            <div class="certification-card__body">
+              <div class="certification-card__meta">
+                <span data-card-region>North America</span>
+                <span data-card-status>Active</span>
+              </div>
+              <h3 data-card-title>UL Listed enclosure ranges</h3>
+              <p data-card-product>PanelSeT, Spacial, Thalassa</p>
+              <p data-card-standard>UL 50 / UL 50E portfolio alignment</p>
+            </div>
+          </article>
+
+          <article class="certification-card" data-certification-card data-category="iec panelset europe">
+            <div class="certification-card__media">
+              <img
+                class="certification-card__logo"
+                src="../STANDARD_ASSETS/IEC.png"
+                alt="IEC certification mark"
+                data-card-logo
+              >
+            </div>
+            <div class="certification-card__body">
+              <div class="certification-card__meta">
+                <span data-card-region>Europe</span>
+                <span data-card-status>Active</span>
+              </div>
+              <h3 data-card-title>IEC enclosure protection</h3>
+              <p data-card-product>PanelSeT, Spacial</p>
+              <p data-card-standard>IEC 62208 / IEC 60529 technical reference</p>
+            </div>
+          </article>
+
+          <article class="certification-card" data-certification-card data-category="marine panelset">
+            <div class="certification-card__media">
+              <img
+                class="certification-card__logo"
+                src="../CERTIFICACIONS%20copy/BUREAU%20VERITAS/bureau-veritas-logo-1024x1024.jpg"
+                alt="Bureau Veritas certification mark"
+                data-card-logo
+              >
+            </div>
+            <div class="certification-card__body">
+              <div class="certification-card__meta">
+                <span data-card-region>Marine</span>
+                <span data-card-status>Validated</span>
+              </div>
+              <h3 data-card-title>Bureau Veritas marine approval</h3>
+              <p data-card-product>PanelSeT SFN, S3X, SMX</p>
+              <p data-card-standard>Marine class approval for selected ranges</p>
+            </div>
+          </article>
+
+          <article class="certification-card" data-certification-card data-category="marine spacial">
+            <div class="certification-card__media">
+              <img
+                class="certification-card__logo"
+                src="../CERTIFICACIONS%20copy/DNV-GL/DNV-GL-Logo-Vector.svg-.png"
+                alt="DNV GL certification mark"
+                data-card-logo
+              >
+            </div>
+            <div class="certification-card__body">
+              <div class="certification-card__meta">
+                <span data-card-region>Marine</span>
+                <span data-card-status>Validated</span>
+              </div>
+              <h3 data-card-title>DNV GL classified portfolio</h3>
+              <p data-card-product>Spacial S3D, SFN, SBM</p>
+              <p data-card-standard>Ship and offshore installation compliance</p>
+            </div>
+          </article>
+
+          <article class="certification-card" data-certification-card data-category="climasys thermal europe">
+            <div class="certification-card__media">
+              <img
+                class="certification-card__logo"
+                src="../processed/product_climasys_centered.png"
+                alt="ClimaSys thermal management product"
+                data-card-logo
+              >
+            </div>
+            <div class="certification-card__body">
+              <div class="certification-card__meta">
+                <span data-card-region>Global</span>
+                <span data-card-status>Active</span>
+              </div>
+              <h3 data-card-title>ClimaSys thermal management</h3>
+              <p data-card-product>Cooling units, fans, thermostats</p>
+              <p data-card-standard>Certified thermal accessories by market</p>
+            </div>
+          </article>
+
+          <article class="certification-card" data-certification-card data-category="iso quality global">
+            <div class="certification-card__media">
+              <img
+                class="certification-card__logo"
+                src="../STANDARD_ASSETS/ISO-Logo-1.png"
+                alt="ISO certification mark"
+                data-card-logo
+              >
+            </div>
+            <div class="certification-card__body">
+              <div class="certification-card__meta">
+                <span data-card-region>Global</span>
+                <span data-card-status>Active</span>
+              </div>
+              <h3 data-card-title>Quality management baseline</h3>
+              <p data-card-product>Manufacturing and quality systems</p>
+              <p data-card-standard>ISO-aligned process governance</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="certification-empty" data-certification-empty hidden>No approvals match the selected criteria.</p>
+
+        <template id="certification-card-template" data-certification-template>
+          <article class="certification-card" data-certification-card>
+            <div class="certification-card__media">
+              <img class="certification-card__logo" src="" alt="" data-card-logo>
+            </div>
+            <div class="certification-card__body">
+              <div class="certification-card__meta">
+                <span data-card-region></span>
+                <span data-card-status></span>
+              </div>
+              <h3 data-card-title></h3>
+              <p data-card-product></p>
+              <p data-card-standard></p>
+            </div>
+          </article>
+        </template>
+      </section>
+
+      <footer class="certification-footer" data-certification-status>
+        <span>Schneider Electric</span>
+        <span>Certification data workspace</span>
+        <span>Validated approval matrix</span>
+      </footer>
+    </main>
+  </body>
+</html>
