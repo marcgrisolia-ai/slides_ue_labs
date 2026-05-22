@@ -7,6 +7,7 @@ const fullscreenButton = document.querySelector("#fullscreen");
 const prevButton = document.querySelector("#prev");
 const nextButton = document.querySelector("#next");
 const counter = document.querySelector("#counter");
+const languageLinks = [...document.querySelectorAll("[data-language-link]")];
 
 let current = 0;
 let slideActivatedAt = 0;
@@ -14,6 +15,10 @@ let environmentFocusStep = 0;
 const productModelTimers = new WeakMap();
 const productModelFrames = new WeakMap();
 const ENVIRONMENT_FOCUS_READY_MS = 3900;
+
+function currentLanguage() {
+  return document.documentElement.lang.toLowerCase().startsWith("fr") ? "fr" : "en";
+}
 
 function splitDisplayText() {
   document.querySelectorAll("[data-split]").forEach((node) => {
@@ -117,15 +122,47 @@ async function toggleFullscreen() {
 function updateFullscreenState() {
   const active = Boolean(fullscreenElement());
   const available = fullscreenAvailable();
+  const fullscreenLabel = currentLanguage() === "fr"
+    ? {
+        enter: "Passer en plein écran",
+        exit: "Quitter le plein écran",
+        blocked: "Plein écran bloqué par le navigateur. Utilisez le menu Affichage > Passer en plein écran de Chrome.",
+      }
+    : {
+        enter: "Enter fullscreen",
+        exit: "Exit fullscreen",
+        blocked: "Fullscreen blocked by browser. Use Chrome View > Enter Full Screen.",
+      };
   body.classList.toggle("is-fullscreen", active);
   fullscreenButton.classList.toggle("is-unavailable", !available);
   fullscreenButton.setAttribute("aria-pressed", String(active));
   fullscreenButton.title = available
     ? active
-      ? "Exit fullscreen"
-      : "Enter fullscreen"
-    : "Fullscreen blocked by browser. Use Chrome View > Enter Full Screen.";
+      ? fullscreenLabel.exit
+      : fullscreenLabel.enter
+    : fullscreenLabel.blocked;
   fullscreenButton.setAttribute("aria-label", fullscreenButton.title);
+}
+
+function updateLanguageLinks() {
+  const activeLanguage = currentLanguage();
+  const slideHash = `#slide-${current + 1}`;
+  const query = window.location.search || "";
+
+  languageLinks.forEach((link) => {
+    const targetLanguage = link.dataset.languageLink;
+    const targetBase = link.dataset.languageTarget || link.getAttribute("href")?.replace(/[?#].*$/, "") || "./";
+    const isActive = targetLanguage === activeLanguage;
+
+    link.classList.toggle("is-active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+
+    link.setAttribute("href", `${targetBase}${query}${slideHash}`);
+  });
 }
 
 function goToSlide(index, options = {}) {
@@ -143,6 +180,7 @@ function goToSlide(index, options = {}) {
   });
 
   counter.textContent = `${String(current + 1).padStart(2, "0")} / 13`;
+  updateLanguageLinks();
   prevButton.disabled = current === 0;
   nextButton.disabled = current === slides.length - 1;
   if (!options.preserveHash) {
@@ -170,15 +208,16 @@ function goToSlide(index, options = {}) {
 
 function resetCounters(slide) {
   slide.querySelectorAll("[data-count]").forEach((node) => {
-    node.textContent = "0";
+    node.textContent = `${node.dataset.prefix || ""}0`;
   });
 }
 
 function animateCounters(slide) {
   slide.querySelectorAll("[data-count]").forEach((node) => {
     const target = Number(node.dataset.count);
+    const prefix = node.dataset.prefix || "";
     if (body.classList.contains("instant")) {
-      node.textContent = target.toLocaleString("en-US").replace(",", "");
+      node.textContent = `${prefix}${target.toLocaleString("en-US").replace(",", "")}`;
       return;
     }
     const duration = target > 100 ? 1250 : 760;
@@ -187,7 +226,7 @@ function animateCounters(slide) {
     function tick(now) {
       const progress = Math.min(1, (now - start) / duration);
       const eased = 1 - Math.pow(1 - progress, 4);
-      node.textContent = Math.round(target * eased).toLocaleString("en-US").replace(",", "");
+      node.textContent = `${prefix}${Math.round(target * eased).toLocaleString("en-US").replace(",", "")}`;
       if (progress < 1) requestAnimationFrame(tick);
     }
 

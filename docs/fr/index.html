@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UE LABS - Version web animée</title>
+    <link rel="icon" href="data:," />
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace(`http://localhost:4174/fr/${window.location.search || ""}${window.location.hash || ""}`);
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css?v=network-labs-fast-20260522" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  </head>
+  <body>
+    <main class="stage" id="stage" aria-label="Présentation web animée UE LABS">
+      <section class="slide slide-cover is-active" data-slide="01" aria-labelledby="slide-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="photo-field" aria-hidden="true">
+          <img src="../assets/processed/cover_hero.jpg" alt="" />
+        </div>
+        <div class="photo-scrim" aria-hidden="true"></div>
+        <div class="center-vignette" aria-hidden="true"></div>
+
+        <header class="topbar">
+          <div class="topline"></div>
+          <img class="brand" src="../assets/processed/schneider_logo_green.png" alt="Life Is On Schneider Electric" />
+        </header>
+
+        <div class="copy-block">
+          <div class="preline" aria-hidden="true"></div>
+          <h1 id="slide-title" data-split>UE LABS</h1>
+          <p class="subtitle" data-reveal>Réseau d’essais, de certification et de validation des produits</p>
+          <div class="rule" aria-hidden="true"></div>
+
+          <div class="speaker" data-reveal>
+            <p>Universal Enclosures LoB</p>
+            <span>Customer Satisfaction &amp; Quality</span>
+          </div>
+        </div>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 1</span>
+        </footer>
+
+        <div class="signal-lines" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-01.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-snapshot" data-slide="02" aria-labelledby="snapshot-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="snapshot-header">
+          <p class="kicker" data-reveal>Vue d’ensemble du réseau</p>
+          <h2 id="snapshot-title" data-title-reveal>UE Labs en un coup d’œil</h2>
+          <p class="snapshot-subtitle" data-reveal>Trois laboratoires locaux situés dans des sites de production, au service de la validation, de la certification et de la qualité.</p>
+        </header>
+
+        <div class="snapshot-constellation" aria-label="Réseau UE Labs de trois sites">
+          <svg class="constellation-canvas" viewBox="0 0 620 360" aria-hidden="true">
+            <path class="constellation-link constellation-link-su-ml" d="M68 43 C184 24 298 58 372 147" />
+            <path class="constellation-link constellation-link-ml-kp" d="M372 147 C322 230 248 281 161 277" />
+            <path class="constellation-link constellation-link-kp-su" d="M161 277 C78 217 44 121 68 43" />
+          </svg>
+          <article class="constellation-node constellation-su">
+            <b>SU</b>
+            <span>Sarre-Union</span>
+            <small>France</small>
+          </article>
+          <article class="constellation-node constellation-ml">
+            <b>ML</b>
+            <span>Molins de Rei</span>
+            <small>Espagne</small>
+          </article>
+          <article class="constellation-node constellation-kp">
+            <b>KP</b>
+            <span>Capellades</span>
+            <small>Espagne</small>
+          </article>
+        </div>
+
+        <aside class="plant-note" data-reveal>
+          <span>Un laboratoire dans chaque site de production&nbsp;:</span>
+          <strong>Sarre-Union, Molins de Rei et Capellades.</strong>
+        </aside>
+
+        <div class="metric-board" aria-label="Indicateurs UE Labs">
+          <article class="metric-card">
+            <strong data-count="3">0</strong>
+            <span>Laboratoires</span>
+            <p>Sarre-Union, Molins de Rei et Capellades</p>
+          </article>
+          <article class="metric-card">
+            <strong data-count="7">0</strong>
+            <span>Équipe des laboratoires</span>
+            <p>Techniciens et encadrement des laboratoires au sein du réseau UE Labs</p>
+          </article>
+          <article class="metric-card">
+            <strong data-count="3000" data-prefix="+">0</strong>
+            <span>Essais / an</span>
+          </article>
+          <article class="metric-card">
+            <strong data-count="1">0</strong>
+            <span>Laboratoire accrédité par UL depuis 1999</span>
+          </article>
+        </div>
+
+        <aside class="cert-note" data-reveal>
+          <span>Capellades Lab est reconnu CTDP par UL depuis 1999, dossier DA307</span>
+        </aside>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 2</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-02.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-org" data-slide="03" aria-labelledby="org-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="org-header">
+          <p class="kicker" data-reveal>Organisation Schneider Electric</p>
+          <h2 id="org-title" data-title-reveal>Positionnement d’UE Labs au sein de Schneider Electric</h2>
+          <p class="org-subtitle" data-reveal>Universal Enclosures LoB fait partie de la structure Energy Management.</p>
+        </header>
+
+        <ol class="org-path" aria-label="Chaîne d’organisation Schneider Electric">
+          <li class="org-step">
+            <span>Energy Management</span>
+            <strong>Activité</strong>
+          </li>
+          <li class="org-step">
+            <span>Power Systems &amp; Services</span>
+            <strong>Division</strong>
+          </li>
+          <li class="org-step">
+            <span>ETO</span>
+            <strong>Engineering To Order LoB</strong>
+          </li>
+          <li class="org-step">
+            <span>Universal Enclosures</span>
+            <strong>LoB</strong>
+          </li>
+          <li class="org-step is-current">
+            <span>UE Labs</span>
+            <strong>Réseau de validation</strong>
+          </li>
+        </ol>
+
+        <aside class="org-formula" data-reveal>
+          <span>Energy Management → Power Systems &amp; Services → ETO → Universal Enclosures → UE Labs</span>
+        </aside>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 3</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-03.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-governance" data-slide="04" aria-labelledby="governance-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="governance-header">
+          <p class="kicker" data-reveal>Modèle opérationnel</p>
+          <h2 id="governance-title" data-title-reveal>Modèle de gouvernance UE Labs</h2>
+          <p class="governance-subtitle" data-reveal>Universal Enclosures Lab est rattaché au département Customer Satisfaction &amp; Quality.</p>
+        </header>
+
+        <div class="governance-map" aria-label="Modèle de gouvernance UE Labs">
+          <svg class="governance-links" viewBox="0 0 1600 560" aria-hidden="true">
+            <path class="gov-link thin" d="M800 112 V178" />
+            <path class="gov-link thin" d="M800 248 V292" />
+            <path class="gov-link side" d="M590 262 H366" />
+            <path class="gov-link side" d="M1010 262 H1234" />
+            <path class="gov-link quality-route" d="M1040 72 C1166 92 1234 136 1248 202" />
+            <path class="gov-link branch lab-route-su" d="M736 338 C638 372 456 386 300 420" />
+            <path class="gov-link branch lab-route-ml" d="M800 338 C790 374 742 392 720 420" />
+            <path class="gov-link branch lab-route-kp" d="M864 338 C954 372 1036 390 1088 420" />
+          </svg>
+
+          <div class="gov-node gov-director"><span>Directeur CS&amp;Q</span></div>
+          <p class="gov-note"><span>Dirige directement UE Labs et pilote également la fonction Quality Director pour les laboratoires.</span></p>
+
+          <div class="gov-node gov-side gov-side-left">
+            <span>Customer Satisfaction &amp; Quality</span>
+            <strong>Département</strong>
+          </div>
+
+          <div class="gov-node gov-leader">
+            <span>Test &amp; Expert Leader</span>
+            <strong>Nom interne&nbsp;: directeur technique des laboratoires</strong>
+          </div>
+
+          <div class="gov-node gov-side gov-side-right">
+            <span>Fonction Quality Director pour les laboratoires</span>
+          </div>
+
+          <div class="lab-token lab-su">
+            <b>SU</b>
+            <span>Sarre-Union Lab</span>
+            <small>France</small>
+          </div>
+          <div class="lab-token lab-ml">
+            <b>ML</b>
+            <span>Molins de Rei Lab</span>
+            <small>Espagne</small>
+          </div>
+          <div class="lab-token lab-kp">
+            <b>KP</b>
+            <span>Capellades Lab</span>
+            <small>Espagne</small>
+          </div>
+        </div>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 4</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-04.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-mission" data-slide="05" aria-labelledby="mission-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="mission-header">
+          <p class="kicker" data-reveal>Mission</p>
+          <h2 id="mission-title" data-title-reveal>Mission</h2>
+          <p class="mission-subtitle" data-reveal>Sept responsabilités opérationnelles structurées comme une chaîne de valeur de validation.</p>
+        </header>
+
+        <div class="mission-grid" aria-label="Responsabilités de mission UE Labs">
+          <article class="mission-card">
+            <b>01</b>
+            <span>Garantir la qualité du standard de production</span>
+          </article>
+          <article class="mission-card">
+            <b>02</b>
+            <span>Assurer la qualification des évolutions produit ou des lancements de nouveaux produits</span>
+          </article>
+          <article class="mission-card">
+            <b>03</b>
+            <span>Assurer les essais de certification, dont 1 laboratoire accrédité UL</span>
+          </article>
+          <article class="mission-card">
+            <b>04</b>
+            <span>Valider les solutions spécifiques P&amp;S</span>
+          </article>
+          <article class="mission-card">
+            <b>05</b>
+            <span>Analyser les retours, RTA et TEX</span>
+          </article>
+          <article class="mission-card">
+            <b>06</b>
+            <span>Apporter un soutien à l’équipe Customer Technical Support</span>
+          </article>
+          <article class="mission-card">
+            <b>07</b>
+            <span>Gérer l’étalonnage des équipements des laboratoires et des sites</span>
+          </article>
+        </div>
+
+        <aside class="mission-close" data-reveal>
+          <span>UE Labs relie qualité de production, préparation à la certification et validation des produits.</span>
+        </aside>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 5</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-05.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-network" data-slide="06" aria-labelledby="network-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="network-header">
+          <p class="kicker" data-reveal>Réseau de laboratoires</p>
+          <h2 id="network-title" data-title-reveal>Réseau de trois laboratoires</h2>
+          <p class="network-subtitle" data-reveal>Réseau UE Labs&nbsp;: SU, ML et KP en France et en Espagne.</p>
+        </header>
+
+        <div class="network-layout">
+          <figure class="network-map" aria-label="Carte montrant les UE Labs en France et en Espagne">
+            <img src="../assets/FRANCE_SPAIN_.png" alt="" />
+            <svg class="network-routes" viewBox="0 0 497 340" aria-hidden="true">
+              <path class="route route-kp" d="M227 198 C236 158 279 112 328 94" />
+              <path class="route route-ml" d="M244 200 C250 159 286 116 328 94" />
+              <g class="map-pin map-pin-su" transform="translate(328 94)">
+                <circle r="12" />
+                <text y="4">SU</text>
+              </g>
+              <g class="map-pin map-pin-kp" transform="translate(227 198)">
+                <circle r="12" />
+                <text y="4">KP</text>
+              </g>
+              <g class="map-pin map-pin-ml" transform="translate(244 200)">
+                <circle r="12" />
+                <text y="4">ML</text>
+              </g>
+            </svg>
+          </figure>
+
+          <aside class="network-panel">
+            <h3 data-reveal>Laboratoires locaux, réseau de validation partagé</h3>
+
+            <div class="network-labs" aria-label="Sites UE Labs">
+              <article class="network-lab lab-row-su">
+                <b>SU</b>
+                <span>Sarre-Union Lab</span>
+                <small>France</small>
+              </article>
+              <article class="network-lab lab-row-ml">
+                <b>ML</b>
+                <span>Molins de Rei Lab</span>
+                <small>Espagne</small>
+              </article>
+              <article class="network-lab lab-row-kp">
+                <b>KP</b>
+                <span>Capellades Lab</span>
+                <small>Espagne</small>
+              </article>
+            </div>
+
+            <div class="network-summary" data-reveal><span>Réseau UE Labs&nbsp;: SU / ML / KP</span></div>
+          </aside>
+        </div>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 6</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-06.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-capellades" data-slide="07" aria-labelledby="capellades-title">
+        <div class="lab-photo" aria-hidden="true">
+          <img src="../assets/processed/capellades_hero.jpg" alt="" />
+        </div>
+        <div class="lab-photo-shade" aria-hidden="true"></div>
+        <div class="technical-grid" aria-hidden="true"></div>
+
+        <div class="lab-profile">
+          <header class="lab-profile-header">
+            <p class="kicker" data-reveal>KP | Espagne</p>
+            <h2 id="capellades-title" data-reveal>
+              <span>Capellades</span>
+              <span>Lab</span>
+            </h2>
+          </header>
+
+          <div class="lab-facts" aria-label="Domaines de focus du Capellades Lab">
+            <article class="lab-fact is-primary">
+              <span>PanelSeT Steel Enclosures</span>
+            </article>
+            <article class="lab-fact">
+              <span>UL CTDP depuis 1999</span>
+            </article>
+          </div>
+
+          <p class="lab-description" data-reveal>
+            Capellades prend en charge la vérification de production des gammes PanelSeT Steel Enclosures, avec une reconnaissance UL CTDP pour une autonomie de test qualifiée.
+          </p>
+
+          <div class="lab-identity lab-identity-kp" data-reveal>
+            <b>KP</b>
+            <span>Capellades Lab</span>
+            <small>Espagne</small>
+          </div>
+        </div>
+
+        <div class="lab-divider" aria-hidden="true"></div>
+
+        <section class="capellades-scope-stage lab-scope-stage" aria-labelledby="capellades-scope-title">
+          <header class="lab-scope-header">
+            <p class="kicker" data-reveal>Périmètre de validation KP</p>
+            <h3 id="capellades-scope-title" data-reveal><span>PanelSeT Steel</span>, validation et certification</h3>
+            <p class="lab-scope-copy" data-reveal>
+              Capellades Lab accompagne la vérification de production des coffrets métalliques avec une reconnaissance UL CTDP pour une autonomie d’essais qualifiée.
+            </p>
+          </header>
+
+          <div class="product-validation lab-scope-validation" data-reveal>
+            <b>KP</b>
+            <div>
+              <span>Validé à Capellades</span>
+              <small>Vérification PanelSeT Steel et capacité de certification UL CTDP.</small>
+            </div>
+          </div>
+
+          <article class="capellades-product-card" data-reveal>
+            <p class="scope-kicker">Famille produit 3D</p>
+            <figure>
+              <model-viewer
+                class="capellades-steel-model"
+                data-product-model
+                data-src="../assets/processed/steel_web.glb"
+                data-start-orbit="-326deg 66deg auto"
+                data-final-orbit="34deg 66deg auto"
+                data-model-delay="3820"
+                data-model-duration="2400"
+                camera-orbit="-326deg 66deg auto"
+                field-of-view="23deg"
+                exposure="1.02"
+                shadow-intensity="0.24"
+                interaction-prompt="none"
+                aria-label="Modèle 3D de la famille PanelSeT Steel Enclosures"
+              ></model-viewer>
+            </figure>
+          </article>
+
+          <article class="capellades-certificate-card" data-reveal>
+            <p class="scope-kicker">Capacité de certification</p>
+            <div class="certificate-frame certificate-frame-compact">
+              <img src="../assets/processed/ul_certificate.png" alt="Certificate of Participation délivré par UL LLC à Schneider Electric Espana S A" />
+            </div>
+            <span>Reconnaissance UL CTDP, dossier DA307.</span>
+          </article>
+        </section>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 7</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-07.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-sarre" data-slide="08" aria-labelledby="sarre-title">
+        <div class="lab-photo" aria-hidden="true">
+          <img src="../assets/processed/sarre_hero.jpg" alt="" />
+        </div>
+        <div class="lab-photo-shade" aria-hidden="true"></div>
+        <div class="technical-grid" aria-hidden="true"></div>
+
+        <div class="lab-profile">
+          <header class="lab-profile-header">
+            <p class="kicker" data-reveal>SU | France</p>
+            <h2 id="sarre-title" data-reveal>
+              <span>Sarre-Union</span>
+              <span>Lab</span>
+            </h2>
+          </header>
+
+          <div class="lab-facts" aria-label="Statut du Sarre-Union Lab dans le réseau">
+            <article class="lab-fact is-primary">
+              <span>Intégré au réseau UE Labs</span>
+            </article>
+            <article class="lab-fact">
+              <span>Vérification produit PanelSeT</span>
+            </article>
+          </div>
+
+          <p class="lab-description" data-reveal>
+            Sarre-Union se concentre sur la vérification des coffrets PanelSeT acier, acier inoxydable et applications spécifiques.
+          </p>
+
+          <div class="lab-identity" data-reveal>
+            <b>SU</b>
+            <span>Sarre-Union Lab</span>
+            <small>France</small>
+          </div>
+        </div>
+
+        <div class="lab-divider" aria-hidden="true"></div>
+
+        <section class="sarre-scope-stage lab-scope-stage" aria-labelledby="sarre-scope-title">
+          <header class="lab-scope-header">
+            <p class="kicker" data-reveal>Périmètre de validation SU</p>
+            <h3 id="sarre-scope-title" data-reveal><span>PanelSeT</span>, validation des coffrets</h3>
+            <p class="lab-scope-copy" data-reveal>
+              Sarre-Union Lab vérifie les gammes PanelSeT Steel, Stainless-Steel et Specific Applications au sein du réseau UE Labs.
+            </p>
+          </header>
+
+          <div class="product-validation lab-scope-validation" data-reveal>
+            <b>SU</b>
+            <div>
+              <span>Validé à Sarre-Union</span>
+              <small>Coffrets acier, inox et applications spécifiques.</small>
+            </div>
+          </div>
+
+          <aside class="sarre-product-strip" aria-label="Périmètre produits du Sarre-Union Lab">
+            <article>
+              <span>PanelSeT Steel Enclosures</span>
+              <small>Gammes acier pour environnements industriels</small>
+            </article>
+            <article>
+              <span>PanelSeT Stainless-Steel Enclosures</span>
+              <small>Gammes hygiène et résistance à la corrosion</small>
+            </article>
+            <article>
+              <span>Specific Applications Enclosures</span>
+              <small>Vérification de coffrets pour applications spécifiques</small>
+            </article>
+          </aside>
+        </section>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 8</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-08.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-molins" data-slide="09" aria-labelledby="molins-title">
+        <div class="lab-photo" aria-hidden="true">
+          <img src="../assets/processed/molins_hero.jpg" alt="" />
+        </div>
+        <div class="lab-photo-shade" aria-hidden="true"></div>
+        <div class="technical-grid" aria-hidden="true"></div>
+
+        <div class="lab-profile">
+          <header class="lab-profile-header">
+            <p class="kicker" data-reveal>ML | Espagne</p>
+            <h2 id="molins-title" data-reveal>
+              <span>Molins de Rei</span>
+              <span>Lab</span>
+            </h2>
+          </header>
+
+          <div class="lab-facts" aria-label="Statut du Molins de Rei Lab dans le réseau">
+            <article class="lab-fact is-primary">
+              <span>Intégré au réseau UE Labs</span>
+            </article>
+            <article class="lab-fact">
+              <span>ClimaSys & PanelSeT Insulated</span>
+            </article>
+          </div>
+
+          <p class="lab-description" data-reveal>
+            Molins de Rei valide les familles de gestion thermique et de coffrets isolants à travers des contrôles produits représentatifs.
+          </p>
+
+          <div class="lab-identity lab-identity-ml" data-reveal>
+            <b>ML</b>
+            <span>Molins de Rei Lab</span>
+            <small>Espagne</small>
+          </div>
+        </div>
+
+        <div class="lab-divider" aria-hidden="true"></div>
+
+        <section class="product-stage" aria-labelledby="products-title">
+          <header class="product-header">
+            <p class="kicker" data-reveal>Périmètre de validation ML</p>
+            <h3 id="products-title" data-reveal><span>ClimaSys</span> et validation PanelSeT Insulated</h3>
+            <p class="product-copy" data-reveal>
+              Molins de Rei Lab valide les familles ClimaSys Thermal Management et PanelSeT Insulated au sein du réseau UE Labs. Les produits ci-dessous sont des exemples représentatifs.
+            </p>
+          </header>
+
+          <div class="product-validation" data-reveal>
+            <b>ML</b>
+            <div>
+              <span>Validé à Molins de Rei</span>
+              <small>Produits représentatifs de gestion thermique et de coffrets isolants.</small>
+            </div>
+          </div>
+
+          <div class="product-family product-family-transparent" data-reveal>
+            <model-viewer
+              class="product-family-model"
+              data-product-model
+              data-src="../assets/processed/climasys_family_web.glb"
+              data-start-orbit="-326deg 66deg auto"
+              data-final-orbit="34deg 66deg auto"
+              data-model-delay="2960"
+              data-model-duration="2400"
+              camera-orbit="-326deg 66deg auto"
+              field-of-view="22deg"
+              exposure="1.04"
+              shadow-intensity="0.2"
+              interaction-prompt="none"
+              aria-label="Modèle 3D de la famille de produits ClimaSys"
+            ></model-viewer>
+          </div>
+
+          <div class="product-tiles" aria-label="Exemples représentatifs de produits ClimaSys et PanelSeT Insulated">
+            <article class="product-tile product-tile-cooling">
+              <div class="product-image has-model">
+                <model-viewer
+                  class="product-model"
+                  data-product-model
+                  data-src="../assets/processed/cooling_unit_web.glb"
+                  data-start-orbit="-326deg 67deg auto"
+                  data-final-orbit="34deg 67deg auto"
+                  data-model-delay="3360"
+                  data-model-duration="2300"
+                  camera-orbit="-326deg 67deg auto"
+                  field-of-view="24deg"
+                  exposure="1"
+                  shadow-intensity="0.32"
+                  interaction-prompt="none"
+                  aria-hidden="true"
+                ></model-viewer>
+                <img class="model-fallback" src="../assets/processed/climasys_cooling_unit.png" alt="" />
+              </div>
+              <span>Unité de refroidissement</span>
+            </article>
+            <article class="product-tile product-tile-fan">
+              <div class="product-image has-model">
+                <model-viewer
+                  class="product-model"
+                  data-product-model
+                  data-src="../assets/processed/cooling_fan_schneider_web.glb"
+                  data-start-orbit="-138deg 64deg auto"
+                  data-final-orbit="222deg 64deg auto"
+                  data-model-delay="3500"
+                  data-model-duration="2200"
+                  camera-orbit="-138deg 64deg auto"
+                  field-of-view="21deg"
+                  exposure="1.22"
+                  shadow-intensity="0.18"
+                  interaction-prompt="none"
+                  aria-hidden="true"
+                ></model-viewer>
+                <img class="model-fallback" src="../assets/processed/climasys_fan_module.png" alt="" />
+              </div>
+              <span>Module ventilateur</span>
+            </article>
+            <article class="product-tile product-tile-control">
+              <div class="product-image has-model">
+                <model-viewer
+                  class="product-model"
+                  data-product-model
+                  data-src="../assets/processed/thermostat_colored_web.glb"
+                  data-start-orbit="-326deg 66deg auto"
+                  data-final-orbit="34deg 66deg auto"
+                  data-model-delay="3640"
+                  data-model-duration="2200"
+                  camera-orbit="-326deg 66deg auto"
+                  field-of-view="25deg"
+                  exposure="1.06"
+                  shadow-intensity="0.22"
+                  interaction-prompt="none"
+                  aria-hidden="true"
+                ></model-viewer>
+                <img class="model-fallback" src="../assets/processed/climasys_thermostat.png" alt="" />
+              </div>
+              <span>Thermostat</span>
+            </article>
+            <article class="product-tile product-tile-insulated">
+              <div class="product-image">
+                <img src="../assets/processed/product_thalassa_centered.png" alt="" />
+              </div>
+              <span>PanelSeT Insulated</span>
+            </article>
+          </div>
+        </section>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 9</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-09.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-scope" data-slide="10" aria-labelledby="scope-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="scope-header">
+          <p class="kicker" data-reveal>Périmètre de certification</p>
+          <h2 id="scope-title" data-title-reveal>Périmètre des normes et certifications</h2>
+          <p class="scope-subtitle" data-reveal>Normes d’origine reconstruites sous forme de matrice de capacités par laboratoire.</p>
+        </header>
+
+        <aside class="scope-card">
+          <img src="../assets/processed/ul_certificate.png" alt="" />
+          <h3>Capellades Lab est reconnu CTDP par UL depuis 1999, dossier DA307.</h3>
+          <p>Les essais selon les normes UL peuvent être réalisés en totale autonomie, avec reconnaissance directe par Underwriters Laboratories Inc.</p>
+          <strong>La reconnaissance UL / CSA reste rattachée à KP dans la matrice.</strong>
+        </aside>
+
+        <div class="scope-matrix" aria-label="Normes de certification par laboratoire">
+          <div class="scope-lab scope-su">
+            <b>SU</b>
+            <span>Sarre-Union</span>
+          </div>
+          <div class="scope-lab scope-ml">
+            <b>ML</b>
+            <span>Molins de Rei</span>
+          </div>
+          <div class="scope-lab scope-kp">
+            <b>KP</b>
+            <span>Capellades</span>
+          </div>
+
+          <div class="scope-row-label scope-row-iec">
+            <img class="standard-logo" src="../assets/STANDARD_ASSETS/IEC.png" alt="" />
+            <span>IEC</span>
+          </div>
+          <div class="scope-row-label scope-row-iso">
+            <img class="standard-logo" src="../assets/STANDARD_ASSETS/ISO-Logo-1.png" alt="" />
+            <span>ISO</span>
+          </div>
+          <div class="scope-row-label scope-row-en">
+            <img class="standard-logo" src="../assets/STANDARD_ASSETS/EN-standard.png" alt="" />
+            <span>EN</span>
+          </div>
+          <div class="scope-row-label scope-row-ul">
+            <span class="standard-logo-pair">
+              <img class="standard-logo" src="../assets/STANDARD_ASSETS/ul-logo-png-transparent.png" alt="" />
+              <img class="standard-logo" src="../assets/STANDARD_ASSETS/CSA.png" alt="" />
+            </span>
+            <span>UL /<br />CSA</span>
+          </div>
+
+          <div class="scope-cell scope-cell-su scope-cell-iec">
+            <span>IEC 62208</span>
+            <span>IEC 60079-0</span>
+          </div>
+          <div class="scope-cell scope-cell-ml scope-cell-iec">
+            <span>IEC 62208</span>
+            <span>IEC 61439-1</span>
+            <span>IEC 61439-5</span>
+          </div>
+          <div class="scope-cell scope-cell-kp scope-cell-iec">
+            <span>IEC 62208</span>
+          </div>
+
+          <div class="scope-cell scope-cell-su scope-cell-iso">
+            <span>ISO 12944-6</span>
+            <span>ISO 4624</span>
+          </div>
+          <div class="scope-cell scope-cell-ml scope-cell-iso"></div>
+          <div class="scope-cell scope-cell-kp scope-cell-iso">
+            <span>ISO 12944-6</span>
+          </div>
+
+          <div class="scope-cell scope-cell-su scope-cell-en">
+            <span>EN 61386-1</span>
+          </div>
+          <div class="scope-cell scope-cell-ml scope-cell-en"></div>
+          <div class="scope-cell scope-cell-kp scope-cell-en"></div>
+
+          <div class="scope-cell scope-cell-su scope-cell-ul"></div>
+          <div class="scope-cell scope-cell-ml scope-cell-ul"></div>
+          <div class="scope-cell scope-cell-kp scope-cell-ul">
+            <span>UL 50 / CSA C22.2 N° 94.1</span>
+            <span>UL 50E / CSA C22.2 N° 94.2</span>
+            <span>UL 746 C</span>
+          </div>
+        </div>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 10</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-10.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-products-tested" data-slide="11" aria-labelledby="tested-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="tested-header">
+          <p class="kicker" data-reveal>Produits testés</p>
+          <h2 id="tested-title" data-title-reveal>Produits testés</h2>
+          <p class="tested-subtitle" data-reveal>Types de produits testés&nbsp;: PanelSeT Steel Enclosures, PanelSeT Insulated Enclosures et ClimaSys Thermal Management System.</p>
+        </header>
+
+        <div class="tested-list" aria-label="Familles de produits testées">
+          <article class="tested-card tested-spacial">
+            <div class="tested-thumb">
+              <img src="../assets/processed/product_spacial_centered.png" alt="" />
+            </div>
+            <div>
+              <h3>PanelSeT Steel Enclosures</h3>
+              <p>Gammes acier pour environnements industriels intérieurs</p>
+            </div>
+          </article>
+
+          <article class="tested-card tested-thalassa">
+            <div class="tested-thumb">
+              <img src="../assets/processed/product_thalassa_centered.png" alt="" />
+            </div>
+            <div>
+              <h3>PanelSeT Insulated Enclosures</h3>
+              <p>Gammes GRP, ABS recyclé et polycarbonate</p>
+            </div>
+          </article>
+
+          <article class="tested-card tested-climasys">
+            <div class="tested-thumb">
+              <img src="../assets/processed/product_climasys_centered.png" alt="" />
+            </div>
+            <div>
+              <h3>ClimaSys Thermal Management System</h3>
+              <p>Unités de ventilation, refroidissement, chauffage et contrôle</p>
+            </div>
+          </article>
+        </div>
+
+        <figure class="tested-hero" aria-label="Groupe de portefeuille produits">
+          <img src="../assets/processed/product_portfolio_hero.jpg" alt="Portefeuille produits PanelSeT et ClimaSys" />
+          <figcaption>
+            <span>Couverture du portefeuille</span>
+            <b>3 familles de produits</b>
+          </figcaption>
+        </figure>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 11</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-11.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-environments" data-slide="12" aria-labelledby="environments-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+        <div class="snapshot-glow" aria-hidden="true"></div>
+
+        <header class="env-header">
+          <p class="kicker" data-reveal>Environnements</p>
+          <h2 id="environments-title" data-title-reveal>Familles de produits / environnements</h2>
+        </header>
+
+        <p class="env-statement">
+          <span>Les coffrets PanelSeT et les solutions</span>
+          <span>ClimaSys Thermal Management contribuent</span>
+          <span><strong>à la protection des équipements</strong> en environnements</span>
+          <span>industriels, infrastructures et conditions exigeantes.</span>
+        </p>
+
+        <figure class="env-hero" aria-label="Portefeuille de familles de produits en environnement industriel">
+          <img src="../assets/processed/product_portfolio_hero.jpg" alt="Produits PanelSeT et ClimaSys" />
+        </figure>
+
+        <svg class="env-route" viewBox="0 0 1360 620" aria-hidden="true">
+          <path class="env-route-shadow" d="M40 520 H300 L356 450 H560 L615 370 H780 L858 250 H1080 L1128 190 H1310" />
+          <path class="env-route-line" d="M40 520 H300 L356 450 H560 L615 370 H780 L858 250 H1080 L1128 190 H1310" />
+          <circle class="env-node env-node-a" cx="300" cy="520" r="10" />
+          <circle class="env-node env-node-b" cx="615" cy="370" r="10" />
+          <circle class="env-node env-node-c" cx="858" cy="250" r="10" />
+          <circle class="env-node env-node-d" cx="1128" cy="190" r="10" />
+        </svg>
+
+        <div class="env-cards" aria-label="Thèmes de validation environnementale">
+          <article class="env-card env-card-industrial">
+            <h3>Protection industrielle</h3>
+            <p>Protection des équipements dans les environnements industriels exigeants</p>
+          </article>
+          <article class="env-card env-card-material">
+            <h3>Résistance des matériaux</h3>
+            <p>Matériaux acier, acier inoxydable et coffrets isolants</p>
+          </article>
+          <article class="env-card env-card-thermal">
+            <h3>Gestion thermique</h3>
+            <p>Systèmes ClimaSys pour la performance thermique et les coffrets</p>
+          </article>
+          <article class="env-card env-card-reliability">
+            <h3>Fiabilité des coffrets</h3>
+            <p>Focus de validation sur les environnements et les cas d’usage</p>
+          </article>
+        </div>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 12</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-12.png" alt="" />
+        </div>
+      </section>
+
+      <section class="slide slide-closing" data-slide="13" aria-labelledby="closing-title">
+        <div class="technical-grid" aria-hidden="true"></div>
+
+        <header class="closing-brand" data-reveal>
+          <img src="../assets/processed/schneider_logo_green.png" alt="Schneider Electric" />
+        </header>
+
+        <svg class="closing-route" viewBox="0 0 1640 560" aria-hidden="true">
+          <path class="closing-route-shadow" d="M44 124 H322 L414 210 H652 L742 284 H1048 L1136 360 H1404 L1506 360" />
+          <path class="closing-route-line closing-route-top" d="M44 124 H322 L414 210 H652 L742 284 H1048 L1136 360 H1404 L1506 360" />
+          <path class="closing-route-shadow" d="M44 486 H304 L376 400 H662 L742 400 H1048 L1136 360" />
+          <path class="closing-route-line closing-route-bottom" d="M44 486 H304 L376 400 H662 L742 400 H1048 L1136 360" />
+          <circle class="closing-node closing-node-a" cx="304" cy="486" r="10" />
+          <circle class="closing-node closing-node-b" cx="662" cy="400" r="10" />
+          <circle class="closing-node closing-node-c" cx="1048" cy="400" r="10" />
+          <circle class="closing-node closing-node-d" cx="1404" cy="360" r="10" />
+        </svg>
+
+        <div class="closing-frames" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <section class="closing-copy">
+          <h2 id="closing-title" data-split>UE LABS</h2>
+          <div class="closing-rule" aria-hidden="true"></div>
+          <p data-reveal>Confiance dans les essais. Préparation à la certification. Qualité produit.</p>
+        </section>
+
+        <footer class="slide-footer" data-reveal>
+          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
+          <span>Page 13</span>
+        </footer>
+
+        <div class="reference-overlay" aria-hidden="true">
+          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-13.png" alt="" />
+        </div>
+      </section>
+    </main>
+
+    <nav class="controls" aria-label="Contrôles des diapositives">
+      <button class="control icon-control" id="prev" type="button" aria-label="Diapositive précédente" title="Diapositive précédente">‹</button>
+      <button class="control icon-control" id="next" type="button" aria-label="Diapositive suivante" title="Diapositive suivante">›</button>
+      <button class="control" id="replay" type="button" aria-label="Relancer l’animation" title="Relancer l’animation">↻</button>
+      <button class="control" id="reference" type="button" aria-label="Afficher/masquer la référence" title="Afficher/masquer la référence" aria-pressed="false">Réf</button>
+      <button class="control icon-control" id="fullscreen" type="button" aria-label="Basculer en plein écran" title="Basculer en plein écran" aria-pressed="false">⛶</button>
+      <span class="language-switcher" role="group" aria-label="Langue">
+        <a class="control language-link is-active" data-language-link="fr" data-language-target="./" href="./#slide-1" aria-current="page">FR</a>
+        <a class="control language-link" data-language-link="en" data-language-target="../" href="../#slide-1">EN</a>
+      </span>
+      <span class="counter" id="counter">01 / 13</span>
+    </nav>
+
+    <script src="app.js?v=network-labs-fast-20260522"></script>
+  </body>
+</html>
