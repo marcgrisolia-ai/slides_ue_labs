@@ -1,0 +1,25 @@
+{
+  "output": "/Users/marcrodriguez/Desktop/SLIDE_SCHNEIDER/output/pdf/universal_enclosures_certifications_guide.pdf",
+  "pages": 15,
+  "imageCache": "/Users/marcrodriguez/Desktop/SLIDE_SCHNEIDER/tmp/pdfs/certifications-guide/image-cache",
+  "convertedAssetCountThisRun": 0,
+  "imageCacheFileCount": 84,
+  "warnings": [],
+  "badgeLabelsUsed": [],
+  "logoOverridesUsed": [
+    "dekra",
+    "lcie",
+    "tuv-rheinland"
+  ],
+  "sourceModel": "/Users/marcrodriguez/Desktop/SLIDE_SCHNEIDER/reports/certifications-pdf-content-model.json",
+  "layoutOverrides": "/Users/marcrodriguez/Desktop/SLIDE_SCHNEIDER/reports/certifications-pdf-layout-overrides.json",
+  "layoutOverrideVersion": "2026-05-25",
+  "metrics": {
+    "productRows": 29,
+    "certificationEntries": 71,
+    "activeCertificationBodies": 8,
+    "standardGroups": 6,
+    "families": 3,
+    "productRowsWithoutListedCertification": 1
+  }
+}

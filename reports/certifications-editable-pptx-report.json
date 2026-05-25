@@ -1,0 +1,15 @@
+{
+  "output": "/Users/marcrodriguez/Desktop/SLIDE_SCHNEIDER/output/editable/universal_enclosures_certifications_guide_canva_handoff_a4.pptx",
+  "sourcePdf": "/Users/marcrodriguez/Desktop/SLIDE_SCHNEIDER/output/pdf/universal_enclosures_certifications_guide.pdf",
+  "renderedPages": 15,
+  "slideSize": {
+    "format": "A4 portrait",
+    "widthPoints": 595.2755905511812,
+    "heightPoints": 841.8897637795277,
+    "widthPixelsAt96Dpi": 793.7007874015749,
+    "heightPixelsAt96Dpi": 1122.5196850393704
+  },
+  "engine": "artifact-tool",
+  "intendedUse": "Canva / PowerPoint visual handoff for page-level review and annotation.",
+  "limitation": "The canonical source for precise element movement is reports/certifications-pdf-layout-overrides.json; this PPTX preserves each finished PDF page as one embedded reference image."
+}

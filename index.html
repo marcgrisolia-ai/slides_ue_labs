@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>UE LABS - Animated web rebuild</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="styles.css?v=stage-cover-16x9-20260522" />
+    <link rel="stylesheet" href="styles.css?v=sarre-image-fit-20260525" />
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   </head>
   <body>
@@ -183,12 +183,11 @@
 
         <div class="governance-map" aria-label="UE Labs governance model">
           <svg class="governance-links" viewBox="0 0 1600 560" aria-hidden="true">
-            <path class="gov-link thin director-drop" d="M800 112 V178" />
-            <path class="gov-link director-branch leader-route" d="M800 178 C704 190 628 198 560 216" />
-            <path class="gov-link director-branch quality-route" d="M800 178 C896 190 972 198 1040 216" />
-            <path class="gov-link branch lab-route-su" d="M560 338 C500 372 408 392 300 420" />
-            <path class="gov-link branch lab-route-ml" d="M560 338 C598 374 670 394 720 420" />
-            <path class="gov-link branch lab-route-kp" d="M560 338 C700 370 910 392 1088 420" />
+            <path class="gov-link director-branch leader-route" d="M620 112 C520 150 460 218 560 270" />
+            <path class="gov-link director-branch quality-route" d="M980 112 C1080 150 1140 218 1040 270" />
+            <path class="gov-link branch lab-route-su" d="M560 410 C498 438 408 456 300 476" />
+            <path class="gov-link branch lab-route-ml" d="M560 410 C604 440 674 458 720 476" />
+            <path class="gov-link branch lab-route-kp" d="M560 410 C704 438 910 456 1088 476" />
           </svg>
 
           <div class="gov-node gov-director"><span>CS&amp;Q Director</span></div>
@@ -296,25 +295,29 @@
         </header>
 
         <div class="network-layout">
-          <figure class="network-map" aria-label="Map showing UE Labs in France and Spain">
-            <img src="assets/FRANCE_SPAIN_.png" alt="" />
-            <svg class="network-routes" viewBox="0 0 497 340" aria-hidden="true">
-              <path class="route route-kp" d="M227 198 C236 158 279 112 328 94" />
-              <path class="route route-ml" d="M244 200 C250 159 286 116 328 94" />
-              <g class="map-pin map-pin-su" transform="translate(328 94)">
-                <circle r="12" />
-                <text y="4">SU</text>
-              </g>
-              <g class="map-pin map-pin-kp" transform="translate(227 198)">
-                <circle r="12" />
-                <text y="4">KP</text>
-              </g>
-              <g class="map-pin map-pin-ml" transform="translate(244 200)">
-                <circle r="12" />
-                <text y="4">ML</text>
-              </g>
-            </svg>
-          </figure>
+          <div class="network-visual">
+            <figure class="network-map" aria-label="Map showing UE Labs in France and Spain">
+              <img src="assets/FRANCE_SPAIN_.png" alt="" />
+              <svg class="network-routes" viewBox="0 0 497 340" aria-hidden="true">
+                <path class="route route-kp" d="M227 198 C236 158 279 112 328 94" />
+                <path class="route route-ml" d="M244 200 C250 159 286 116 328 94" />
+                <g class="map-pin map-pin-su" transform="translate(328 94)">
+                  <circle r="12" />
+                  <text y="4">SU</text>
+                </g>
+                <g class="map-pin map-pin-kp" transform="translate(227 198)">
+                  <circle r="12" />
+                  <text y="4">KP</text>
+                </g>
+                <g class="map-pin map-pin-ml" transform="translate(244 200)">
+                  <circle r="12" />
+                  <text y="4">ML</text>
+                </g>
+              </svg>
+            </figure>
+
+            <div class="network-summary" data-reveal><span>UE Labs network: SU / ML / KP</span></div>
+          </div>
 
           <aside class="network-panel">
             <h3 data-reveal>Local labs, shared validation network</h3>
@@ -336,8 +339,6 @@
                 <small>Spain</small>
               </article>
             </div>
-
-            <div class="network-summary" data-reveal><span>UE Labs network: SU / ML / KP</span></div>
           </aside>
         </div>
 
@@ -504,16 +505,40 @@
 
           <aside class="sarre-product-strip" aria-label="Sarre-Union Lab product scope">
             <article>
+              <figure aria-hidden="true">
+                <img src="assets/processed/sarre_panelset_steel.png" alt="" />
+              </figure>
               <span>PanelSeT Steel Enclosures</span>
               <small>Steel ranges for industrial environments</small>
+              <ul class="range-codes" aria-label="Representative steel ranges">
+                <li>SM</li>
+                <li>SFN</li>
+                <li>SFHD</li>
+              </ul>
             </article>
             <article>
+              <figure aria-hidden="true">
+                <img src="assets/processed/sarre_panelset_stainless.png" alt="" />
+              </figure>
               <span>PanelSeT Stainless-Steel Enclosures</span>
               <small>Hygiene and corrosion-resistance ranges</small>
+              <ul class="range-codes" aria-label="Representative stainless-steel ranges">
+                <li>SBX</li>
+                <li>S3X</li>
+                <li>SMX</li>
+              </ul>
             </article>
             <article>
+              <figure aria-hidden="true">
+                <img src="assets/processed/sarre_panelset_specific.png" alt="" />
+              </figure>
               <span>Specific Applications Enclosures</span>
               <small>Application-focused enclosure verification</small>
+              <ul class="range-codes" aria-label="Representative specific application ranges">
+                <li>S3DEX</li>
+                <li>S3HF</li>
+                <li>S3CM</li>
+              </ul>
             </article>
           </aside>
         </section>
@@ -913,6 +938,6 @@
       <span class="counter" id="counter">01 / 13</span>
     </nav>
 
-    <script src="app.js?v=network-labs-fast-20260522"></script>
+    <script src="app.js?v=sarre-image-fit-20260525"></script>
   </body>
 </html>

@@ -16,6 +16,9 @@
   --line: rgba(255, 255, 255, 0.13);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-inout: cubic-bezier(0.7, 0, 0.22, 1);
+  --stage-base-width: 2048px;
+  --stage-base-height: 1152px;
+  --stage-scale: 1;
   font-family: Poppins, Aptos, Inter, Arial, Helvetica, sans-serif;
 }
 
@@ -56,20 +59,20 @@ button {
   position: fixed;
   left: 50%;
   top: 50%;
-  width: max(100vw, calc(100svh * 16 / 9));
-  height: max(100svh, calc(100vw * 9 / 16));
+  width: var(--stage-base-width);
+  height: var(--stage-base-height);
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--deep);
   container-type: size;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(var(--stage-scale));
   transform-origin: center;
 }
 
 .stage:fullscreen,
 .stage:-webkit-full-screen {
-  width: max(100vw, calc(100vh * 16 / 9));
-  height: max(100vh, calc(100vw * 9 / 16));
+  width: var(--stage-base-width);
+  height: var(--stage-base-height);
   aspect-ratio: 16 / 9;
 }
 
@@ -875,7 +878,7 @@ body.ready .slide.is-active.slide-org .slide-footer {
   position: absolute;
   left: clamp(72px, 6cqw, 112px);
   right: clamp(72px, 6cqw, 112px);
-  top: clamp(220px, 22cqh, 266px);
+  top: clamp(300px, 27.5cqh, 320px);
   height: min(56cqh, 540px);
 }
 
@@ -968,7 +971,7 @@ body.ready .slide.is-active.slide-org .slide-footer {
 .gov-note {
   position: absolute;
   left: 31%;
-  top: 124px;
+  top: 130px;
   width: 38%;
   margin: 0;
   color: var(--muted);
@@ -1038,7 +1041,7 @@ body.ready .slide.is-active.slide-org .slide-footer {
 
 .gov-leader {
   left: 21%;
-  top: 216px;
+  top: 280px;
   width: 28%;
   min-height: 126px;
   border-color: rgba(61, 205, 88, 0.88);
@@ -1064,7 +1067,7 @@ body.ready .slide.is-active.slide-org .slide-footer {
 
 .gov-quality {
   left: 51%;
-  top: 216px;
+  top: 280px;
   width: 28%;
   min-height: 126px;
   justify-items: start;
@@ -1093,7 +1096,7 @@ body.ready .slide.is-active.slide-org .slide-footer {
 
 .lab-token {
   position: absolute;
-  top: 420px;
+  top: 466px;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
@@ -1295,7 +1298,7 @@ body.ready .slide.is-active.slide-governance .slide-footer {
   position: absolute;
   left: clamp(100px, 6.4cqw, 132px);
   right: clamp(100px, 8.5cqw, 176px);
-  top: clamp(250px, 25cqh, 286px);
+  top: clamp(282px, 27.6cqh, 318px);
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(22px, 3cqh, 36px) clamp(70px, 5cqw, 96px);
@@ -1491,6 +1494,11 @@ body.ready .slide.is-active.slide-mission .slide-footer {
   align-items: start;
 }
 
+.network-visual {
+  display: grid;
+  justify-items: center;
+}
+
 .network-map {
   position: relative;
   width: 100%;
@@ -1647,9 +1655,9 @@ body.ready .slide.is-active.slide-mission .slide-footer {
 }
 
 .network-summary {
-  margin-top: clamp(54px, 7cqh, 78px);
+  margin-top: clamp(14px, 1.8cqh, 20px);
   width: min(560px, 92%);
-  min-height: clamp(70px, 7.8cqh, 84px);
+  min-height: clamp(64px, 6.2cqh, 72px);
   display: grid;
   place-items: center;
   border: 1px solid rgba(117, 136, 143, 0.18);
@@ -1922,6 +1930,7 @@ body.ready .slide.is-active.slide-network .slide-footer {
 
 .capellades-scope-stage {
   top: clamp(138px, 13cqh, 168px);
+  row-gap: clamp(28px, 3.4cqh, 42px);
 }
 
 .lab-scope-header {
@@ -1979,9 +1988,9 @@ body.ready .slide.is-active.slide-network .slide-footer {
 }
 
 .capellades-product-card {
-  min-height: clamp(278px, 31cqh, 342px);
+  min-height: clamp(330px, 37cqh, 426px);
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto minmax(252px, 1fr);
   padding: clamp(20px, 1.5cqw, 28px);
   overflow: hidden;
 }
@@ -2037,7 +2046,7 @@ body.ready .slide.is-active.slide-network .slide-footer {
 .capellades-product-card figure {
   align-self: end;
   margin: 0;
-  min-height: 210px;
+  min-height: clamp(246px, 26cqh, 300px);
   display: grid;
   place-items: end center;
 }
@@ -2066,12 +2075,12 @@ body.ready .slide.is-active.slide-network .slide-footer {
   position: relative;
   display: block;
   width: min(460px, 108%);
-  height: 226px;
+  height: clamp(252px, 26.6cqh, 306px);
   background: transparent;
   pointer-events: none;
   opacity: 0;
   filter: drop-shadow(0 28px 28px rgba(0, 0, 0, 0.32));
-  transform: translateY(16px) scale(1.06);
+  transform: translateY(8px) scale(1.08);
   transition: opacity 320ms ease;
   --poster-color: transparent;
   --progress-bar-color: var(--green);
@@ -2087,7 +2096,7 @@ body.ready .slide.is-active.slide-network .slide-footer {
 }
 
 .capellades-certificate-card {
-  min-height: clamp(278px, 31cqh, 342px);
+  min-height: clamp(330px, 37cqh, 426px);
   display: grid;
   grid-template-rows: auto 1fr auto;
   padding: clamp(20px, 1.5cqw, 28px);
@@ -2099,7 +2108,7 @@ body.ready .slide.is-active.slide-network .slide-footer {
 }
 
 .certificate-frame-compact {
-  width: min(226px, 100%);
+  width: min(258px, 100%);
   justify-self: center;
   background: rgba(255, 255, 255, 0.96);
   box-shadow:
@@ -2113,7 +2122,7 @@ body.ready .slide.is-active.slide-network .slide-footer {
 
 .capellades-certificate-card > span {
   display: block;
-  margin-top: 18px;
+  margin-top: clamp(20px, 2.2cqh, 26px);
   color: var(--text);
   font-size: clamp(17px, 1cqw, 20px);
   line-height: 1.16;
@@ -2266,30 +2275,78 @@ body.ready .slide.is-active.slide-network .slide-footer {
   top: auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 1.6cqw, 28px);
+  gap: clamp(18px, 1.5cqw, 26px);
+  margin-top: clamp(4px, 0.8cqh, 10px);
 }
 
 .sarre-product-strip article {
-  min-height: clamp(174px, 19cqh, 214px);
+  position: relative;
+  min-height: clamp(344px, 38cqh, 426px);
   display: grid;
+  grid-template-rows: clamp(116px, 14cqh, 154px) auto auto 1fr;
   align-content: start;
-  gap: 16px;
-  padding: clamp(22px, 1.8cqw, 32px);
+  gap: clamp(12px, 1.35cqh, 16px);
+  padding: clamp(20px, 1.55cqw, 28px);
   border: 1px solid rgba(61, 205, 88, 0.36);
   background: rgba(12, 19, 21, 0.86);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     0 20px 42px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   opacity: 0;
   transform: translateY(24px);
 }
 
 .sarre-product-strip article::before {
   content: "";
+  position: absolute;
+  left: clamp(22px, 1.6cqw, 30px);
+  top: clamp(24px, 2.2cqh, 30px);
   width: 44px;
   height: 2px;
   background: var(--green);
   box-shadow: 0 0 14px rgba(61, 205, 88, 0.24);
+}
+
+.sarre-product-strip figure {
+  position: relative;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  border-bottom: 1px solid rgba(61, 205, 88, 0.16);
+  background:
+    radial-gradient(circle at 50% 72%, rgba(61, 205, 88, 0.16), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 58%);
+}
+
+.sarre-product-strip figure::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(61, 205, 88, 0.42), transparent);
+}
+
+.sarre-product-strip img {
+  position: relative;
+  max-width: 112%;
+  max-height: clamp(104px, 12.2cqh, 140px);
+  object-fit: contain;
+  filter: drop-shadow(0 22px 20px rgba(0, 0, 0, 0.34));
+  transform: translateY(4px);
+}
+
+.sarre-product-strip article:nth-child(2) img {
+  max-width: 106%;
+  max-height: clamp(100px, 11.6cqh, 134px);
+}
+
+.sarre-product-strip article:nth-child(3) img {
+  max-width: 106%;
+  max-height: clamp(100px, 11.6cqh, 134px);
 }
 
 .sarre-product-strip span {
@@ -2303,6 +2360,29 @@ body.ready .slide.is-active.slide-network .slide-footer {
   color: var(--muted);
   font-size: clamp(14px, 0.94cqw, 18px);
   line-height: 1.2;
+}
+
+.range-codes {
+  align-self: end;
+  margin: clamp(10px, 1.4cqh, 16px) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.range-codes li {
+  min-width: 42px;
+  padding: 5px 8px 4px;
+  border: 1px solid rgba(61, 205, 88, 0.32);
+  background: rgba(61, 205, 88, 0.1);
+  color: rgba(228, 241, 232, 0.82);
+  font-size: clamp(10px, 0.68cqw, 13px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-align: center;
 }
 
 body.ready .slide.is-active .lab-photo {

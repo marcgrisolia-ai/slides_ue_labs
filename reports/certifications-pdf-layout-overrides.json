@@ -1,0 +1,187 @@
+{
+  "version": "2026-05-25",
+  "purpose": "Repeatable fine-tuning controls for the Universal Enclosures certifications PDF. Edit this file for small layout movements, then rebuild the PDF.",
+  "units": "points",
+  "page": {
+    "format": "A4 portrait",
+    "width": 595.2755905511812,
+    "height": 841.8897637795277
+  },
+  "global": {
+    "marginX": 42,
+    "topY": 795.8897637795277,
+    "bottomY": 58,
+    "footerY": 28,
+    "logoFitInsetRatio": 0.04,
+    "headerLogoBox": {
+      "width": 78,
+      "height": 22
+    },
+    "coverBodyLogoRow": {
+      "topY": 174,
+      "logoWidth": 48,
+      "logoHeight": 30,
+      "gap": 10
+    },
+    "overview": {
+      "leftMetricWidth": 238,
+      "familyColumnGap": 28,
+      "familyCountReserveWidth": 108
+    },
+    "certificationBodies": {
+      "rowHeight": 58,
+      "logoWidth": 58,
+      "logoHeight": 32,
+      "textOffsetX": 92
+    },
+    "productSheets": {
+      "imageBoxWidth": 74,
+      "imageBoxHeight": 54,
+      "bodyLogoAreaWidth": 232,
+      "bodyLogoCellWidth": 39,
+      "bodyLogoCellHeight": 22,
+      "bodyLogoGap": 7,
+      "certBodyLogoWidth": 22,
+      "certBodyLogoHeight": 13,
+      "sheetGap": 9
+    },
+    "annex": {
+      "labelWidth": 180
+    }
+  },
+  "elementOverrides": {
+    "bodyLogo": {
+      "bureau-veritas": {
+        "cover": {
+          "dx": 0,
+          "dy": 0,
+          "scale": 1
+        }
+      },
+      "lcie": {
+        "cover": {
+          "dx": 0,
+          "dy": 0,
+          "scale": 1
+        }
+      },
+      "bureau-veritas-marine": {
+        "cover": {
+          "dx": 0,
+          "dy": 0,
+          "scale": 1
+        }
+      },
+      "tuv-rheinland": {
+        "cover": {
+          "dx": 0,
+          "dy": 0,
+          "scale": 1
+        }
+      },
+      "ul": {
+        "cover": {
+          "dx": 0,
+          "dy": 0,
+          "scale": 1
+        }
+      },
+      "dnv-gl": {
+        "cover": {
+          "dx": 0,
+          "dy": 0,
+          "scale": 1
+        }
+      },
+      "dekra": {
+        "cover": {
+          "dx": 0,
+          "dy": 0,
+          "scale": 1
+        }
+      },
+      "asefa": {
+        "cover": {
+          "dx": 0,
+          "dy": 0,
+          "scale": 1
+        }
+      }
+    },
+    "overviewFamilies": {
+      "panelset-steel-stainless-steel-enclosures": {
+        "dx": 0,
+        "dy": 0
+      },
+      "panelset-insulated-enclosures": {
+        "dx": 0,
+        "dy": 0
+      },
+      "spacial-steel-stainless-steel-enclosures": {
+        "dx": 0,
+        "dy": 0
+      },
+      "thalsassa-insulated-enclosures": {
+        "dx": 0,
+        "dy": 0
+      },
+      "climasys-thermal-management": {
+        "dx": 0,
+        "dy": 0
+      }
+    }
+  },
+  "pageOverrides": {
+    "1": {
+      "notes": "Cover. Body logo row can be moved with global.coverBodyLogoRow or individual elementOverrides.bodyLogo.*.cover."
+    },
+    "2": {
+      "notes": "Overview. Family count overlap is controlled by global.overview.familyCountReserveWidth."
+    },
+    "3": {
+      "notes": "Standards referenced."
+    },
+    "4": {
+      "notes": "Certification bodies."
+    },
+    "5": {
+      "notes": "Product catalogue."
+    },
+    "6": {
+      "notes": "Product catalogue."
+    },
+    "7": {
+      "notes": "Product sheets."
+    },
+    "8": {
+      "notes": "Product sheets."
+    },
+    "9": {
+      "notes": "Product sheets."
+    },
+    "10": {
+      "notes": "Product sheets."
+    },
+    "11": {
+      "notes": "Product sheets."
+    },
+    "12": {
+      "notes": "Product sheets."
+    },
+    "13": {
+      "notes": "Product sheets."
+    },
+    "14": {
+      "notes": "Product sheets."
+    },
+    "15": {
+      "notes": "Annex."
+    }
+  },
+  "workflow": [
+    "Edit this JSON for measured nudges in points.",
+    "Run: python3 scripts/build_certifications_pdf.py",
+    "Render for QA: rm -rf tmp/pdfs/certifications-guide/rendered && mkdir -p tmp/pdfs/certifications-guide/rendered && pdftoppm -png -r 150 output/pdf/universal_enclosures_certifications_guide.pdf tmp/pdfs/certifications-guide/rendered/page",
+    "Review the regenerated PNG pages and contact sheet before exporting the final PDF."
+  ]
+}
