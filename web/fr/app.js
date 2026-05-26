@@ -9,12 +9,36 @@ const nextButton = document.querySelector("#next");
 const counter = document.querySelector("#counter");
 const languageLinks = [...document.querySelectorAll("[data-language-link]")];
 
+const STAGE_REFERENCE_WIDTH = 2048;
+const STAGE_REFERENCE_HEIGHT = 1152;
 let current = 0;
 let slideActivatedAt = 0;
 let environmentFocusStep = 0;
 const productModelTimers = new WeakMap();
 const productModelFrames = new WeakMap();
 const ENVIRONMENT_FOCUS_READY_MS = 3900;
+
+function viewportSize() {
+  if (window.visualViewport) {
+    return {
+      width: window.visualViewport.width,
+      height: window.visualViewport.height,
+    };
+  }
+  return {
+    width: window.innerWidth || document.documentElement.clientWidth,
+    height: window.innerHeight || document.documentElement.clientHeight,
+  };
+}
+
+function updateStageScale() {
+  const viewport = viewportSize();
+  const scale = Math.min(
+    viewport.width / STAGE_REFERENCE_WIDTH,
+    viewport.height / STAGE_REFERENCE_HEIGHT
+  );
+  stage.style.setProperty("--stage-scale", String(Math.max(0.05, scale)));
+}
 
 function currentLanguage() {
   return document.documentElement.lang.toLowerCase().startsWith("fr") ? "fr" : "en";
@@ -38,6 +62,7 @@ function splitDisplayText() {
 }
 
 function boot() {
+  updateStageScale();
   splitDisplayText();
   if (new URLSearchParams(window.location.search).has("instant")) {
     body.classList.add("instant");
@@ -71,7 +96,7 @@ function replayIntro() {
 
 function toggleReference() {
   const active = body.classList.toggle("show-reference");
-  referenceButton.setAttribute("aria-pressed", String(active));
+  referenceButton?.setAttribute("aria-pressed", String(active));
 }
 
 function fullscreenElement() {
@@ -79,7 +104,7 @@ function fullscreenElement() {
 }
 
 function fullscreenAvailable() {
-  const target = stage || document.documentElement;
+  const target = document.documentElement;
   return Boolean(
     (document.fullscreenEnabled && target.requestFullscreen) ||
       (document.webkitFullscreenEnabled && target.webkitRequestFullscreen)
@@ -87,7 +112,7 @@ function fullscreenAvailable() {
 }
 
 async function enterFullscreen() {
-  const target = stage || document.documentElement;
+  const target = document.documentElement;
   if (target.requestFullscreen) {
     try {
       await target.requestFullscreen({ navigationUI: "hide" });
@@ -120,6 +145,8 @@ async function toggleFullscreen() {
 }
 
 function updateFullscreenState() {
+  updateStageScale();
+  window.setTimeout(updateStageScale, 80);
   const active = Boolean(fullscreenElement());
   const available = fullscreenAvailable();
   const fullscreenLabel = currentLanguage() === "fr"
@@ -179,7 +206,7 @@ function goToSlide(index, options = {}) {
     slide.classList.toggle("is-after", slideIndex > current);
   });
 
-  counter.textContent = `${String(current + 1).padStart(2, "0")} / 13`;
+  counter.textContent = `${String(current + 1).padStart(2, "0")} / ${slides.length}`;
   updateLanguageLinks();
   prevButton.disabled = current === 0;
   nextButton.disabled = current === slides.length - 1;
@@ -438,8 +465,8 @@ function updatePointerParallax(event) {
   }
 }
 
-replayButton.addEventListener("click", replayIntro);
-referenceButton.addEventListener("click", toggleReference);
+replayButton?.addEventListener("click", replayIntro);
+referenceButton?.addEventListener("click", toggleReference);
 fullscreenButton.addEventListener("click", () => {
   toggleFullscreen().catch(() => {
     fullscreenButton.classList.add("is-denied");
@@ -450,6 +477,9 @@ prevButton.addEventListener("click", navigateBackward);
 nextButton.addEventListener("click", navigateForward);
 document.addEventListener("fullscreenchange", updateFullscreenState);
 document.addEventListener("webkitfullscreenchange", updateFullscreenState);
+window.addEventListener("resize", updateStageScale);
+window.addEventListener("orientationchange", updateStageScale);
+window.visualViewport?.addEventListener("resize", updateStageScale);
 
 stage.addEventListener("click", (event) => {
   if (!isEnvironmentSlide()) return;

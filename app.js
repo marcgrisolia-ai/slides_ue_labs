@@ -96,7 +96,7 @@ function replayIntro() {
 
 function toggleReference() {
   const active = body.classList.toggle("show-reference");
-  referenceButton.setAttribute("aria-pressed", String(active));
+  referenceButton?.setAttribute("aria-pressed", String(active));
 }
 
 function fullscreenElement() {
@@ -206,7 +206,7 @@ function goToSlide(index, options = {}) {
     slide.classList.toggle("is-after", slideIndex > current);
   });
 
-  counter.textContent = `${String(current + 1).padStart(2, "0")} / 13`;
+  counter.textContent = `${String(current + 1).padStart(2, "0")} / ${slides.length}`;
   updateLanguageLinks();
   prevButton.disabled = current === 0;
   nextButton.disabled = current === slides.length - 1;
@@ -465,8 +465,8 @@ function updatePointerParallax(event) {
   }
 }
 
-replayButton.addEventListener("click", replayIntro);
-referenceButton.addEventListener("click", toggleReference);
+replayButton?.addEventListener("click", replayIntro);
+referenceButton?.addEventListener("click", toggleReference);
 fullscreenButton.addEventListener("click", () => {
   toggleFullscreen().catch(() => {
     fullscreenButton.classList.add("is-denied");

@@ -10,7 +10,7 @@
         window.location.replace(`http://localhost:4174/fr/${window.location.search || ""}${window.location.hash || ""}`);
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=sarre-image-fit-20260525" />
+    <link rel="stylesheet" href="styles.css?v=governance-orgchart-20260525d" />
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
   </head>
   <body>
@@ -182,29 +182,38 @@
 
         <header class="governance-header">
           <p class="kicker" data-reveal>Modèle opérationnel</p>
-          <h2 id="governance-title" data-title-reveal>Modèle de gouvernance UE Labs</h2>
-          <p class="governance-subtitle" data-reveal>Universal Enclosures Lab est rattaché au département Customer Satisfaction &amp; Quality.</p>
+          <h2 id="governance-title" data-title-reveal>Gouvernance UE Labs</h2>
+          <p class="governance-subtitle" data-reveal>Ligne hiérarchique pertinente des laboratoires dans l’organisation Customer Satisfaction &amp; Quality.</p>
         </header>
 
         <div class="governance-map" aria-label="Modèle de gouvernance UE Labs">
-          <svg class="governance-links" viewBox="0 0 1600 560" aria-hidden="true">
-            <path class="gov-link director-branch leader-route" d="M620 112 C520 150 460 218 560 270" />
-            <path class="gov-link director-branch quality-route" d="M980 112 C1080 150 1140 218 1040 270" />
-            <path class="gov-link branch lab-route-su" d="M560 410 C498 438 408 456 300 476" />
-            <path class="gov-link branch lab-route-ml" d="M560 410 C604 440 674 458 720 476" />
-            <path class="gov-link branch lab-route-kp" d="M560 410 C704 438 910 456 1088 476" />
+          <svg class="governance-links" viewBox="0 0 1600 620" aria-hidden="true">
+            <path class="gov-link hierarchy-trunk trunk-top" d="M800 114 V168" />
+            <path class="gov-link hierarchy-branch role-bus" d="M516 168 H1084" />
+            <path class="gov-link hierarchy-branch role-drop-su" d="M516 168 V216" />
+            <path class="gov-link hierarchy-branch role-drop-labs" d="M1084 168 V216" />
+            <path class="gov-link hierarchy-trunk trunk-lab" d="M800 168 V402" />
+            <path class="gov-link hierarchy-branch lab-bus" d="M219 402 H1268" />
+            <path class="gov-link hierarchy-branch lab-drop-su" d="M219 402 V448" />
+            <path class="gov-link hierarchy-branch lab-drop-kp" d="M659 402 V448" />
+            <path class="gov-link hierarchy-branch lab-drop-ml" d="M1268 402 V448" />
+            <path class="gov-link technician-route technician-route-su" d="M219 518 V562" />
+            <path class="gov-link technician-route technician-route-kp" d="M659 518 V562" />
+            <path class="gov-link technician-route technician-route-ml" d="M1268 518 V562" />
           </svg>
 
-          <div class="gov-node gov-director"><span>Directeur CS&amp;Q</span></div>
-          <p class="gov-note"><span>Dirige directement UE Labs et pilote également la fonction Quality Director pour les laboratoires.</span></p>
-
-          <div class="gov-node gov-leader">
-            <span>Test &amp; Expert Leader</span>
-            <strong>Nom interne&nbsp;: directeur technique des laboratoires</strong>
+          <div class="gov-node gov-director">
+            <span>Responsable Customer Satisfaction &amp; Quality</span>
+            <strong>Organisation CS&amp;Q</strong>
           </div>
 
-          <div class="gov-node gov-quality">
-            <span>Fonction Quality Director pour les laboratoires</span>
+          <div class="gov-node gov-su-leader">
+            <span>SU LAB TEAM LEADER</span>
+          </div>
+
+          <div class="gov-node gov-leader">
+            <span>Labs Test &amp; Expert Leader</span>
+            <strong>Directeur technique des laboratoires</strong>
           </div>
 
           <div class="lab-token lab-su">
@@ -212,15 +221,28 @@
             <span>Sarre-Union Lab</span>
             <small>France</small>
           </div>
+          <div class="lab-token lab-kp">
+            <b>KP</b>
+            <span>Capellades Lab</span>
+            <small>Espagne</small>
+          </div>
           <div class="lab-token lab-ml">
             <b>ML</b>
             <span>Molins de Rei Lab</span>
             <small>Espagne</small>
           </div>
-          <div class="lab-token lab-kp">
-            <b>KP</b>
-            <span>Capellades Lab</span>
-            <small>Espagne</small>
+
+          <div class="gov-node gov-tech gov-tech-su">
+            <span>Techniciens de laboratoire</span>
+            <strong>2 rôles techniques</strong>
+          </div>
+          <div class="gov-node gov-tech gov-tech-kp">
+            <span>Technicien de laboratoire</span>
+            <strong>1 rôle technique</strong>
+          </div>
+          <div class="gov-node gov-tech gov-tech-ml">
+            <span>Technicien de laboratoire</span>
+            <strong>1 rôle technique</strong>
           </div>
         </div>
 
@@ -441,6 +463,21 @@
             </div>
             <span>Reconnaissance UL CTDP, dossier DA307.</span>
           </article>
+
+          <div class="capellades-standards" data-reveal aria-label="Normes et organismes de certification utilisés par Capellades">
+            <div>
+              <p>Laboratoire principal utilisé pour la validation des normes</p>
+              <small>Organismes et partenaires de certification sélectionnés</small>
+            </div>
+            <ul class="capellades-standard-logos">
+              <li><img src="../assets/STANDARD_ASSETS/ul-logo-png-transparent.png" alt="UL" /></li>
+              <li><img src="../assets/STANDARD_ASSETS/CSA.png" alt="CSA" /></li>
+              <li><img src="../assets/CERTIFICACIONS copy/BUREAU VERITAS/bureau-veritas-logo-1024x1024.jpg" alt="Bureau Veritas" /></li>
+              <li><img src="../assets/processed/certification_logos/lcie_logo.png" alt="LCIE Bureau Veritas" /></li>
+              <li class="is-wide"><img src="../assets/processed/certification_logos/dekra_logo.png" alt="DEKRA" /></li>
+              <li class="is-more"><span>Et plus</span></li>
+            </ul>
+          </div>
         </section>
 
         <footer class="slide-footer" data-reveal>
@@ -523,7 +560,7 @@
             </article>
             <article>
               <figure aria-hidden="true">
-                <img src="../assets/processed/sarre_panelset_stainless.png" alt="" />
+                <img src="../assets/processed/sarre_panelset_stainless_selected.png" alt="" />
               </figure>
               <span>PanelSeT Stainless-Steel Enclosures</span>
               <small>Gammes hygiène et résistance à la corrosion</small>
@@ -535,7 +572,7 @@
             </article>
             <article>
               <figure aria-hidden="true">
-                <img src="../assets/processed/sarre_panelset_specific.png" alt="" />
+                <img src="../assets/processed/sarre_panelset_specific_fit.png" alt="" />
               </figure>
               <span>Specific Applications Enclosures</span>
               <small>Vérification de coffrets pour applications spécifiques</small>
@@ -546,6 +583,10 @@
               </ul>
             </article>
           </aside>
+
+          <p class="sarre-nuclear-note" data-reveal>
+            Depuis 2026, les <strong>Nuclear Painting tests</strong> sont conduits à Sarre-Union.
+          </p>
         </section>
 
         <footer class="slide-footer" data-reveal>
@@ -613,7 +654,17 @@
             </div>
           </div>
 
-          <div class="product-family product-family-transparent" data-reveal>
+          <div class="product-family product-family-transparent climasys-focus" data-reveal>
+            <div class="climasys-focus-copy">
+              <span>ClimaSys</span>
+              <strong>Thermal Management</strong>
+              <small>Produits de refroidissement, ventilation et contrôle thermique.</small>
+              <ul class="climasys-product-list" aria-label="Produits ClimaSys représentatifs">
+                <li>Unités de refroidissement</li>
+                <li>Modules ventilateurs</li>
+                <li>Thermostats</li>
+              </ul>
+            </div>
             <model-viewer
               class="product-family-model"
               data-product-model
@@ -631,34 +682,35 @@
             ></model-viewer>
           </div>
 
-          <div class="product-tiles product-tiles-insulated" aria-label="Sous-gammes de coffrets PanelSeT Insulated">
-            <article class="product-insulated-hero">
+          <div class="product-tiles product-tiles-insulated" aria-label="Structure de la famille de coffrets PanelSeT Insulated">
+            <div class="panelset-focus-copy">
+              <span>PanelSeT Insulated</span>
+              <strong>Structure de famille</strong>
+              <small>Périmètre de validation au niveau famille pour les gammes de coffrets isolants.</small>
+              <ul class="panelset-range-list" aria-label="Sous-catégories PanelSeT Insulated">
+                <li>
+                  <b>TBS-TBP</b>
+                  <span>Boîtes industrielles</span>
+                </li>
+                <li>
+                  <b>PLS</b>
+                  <span>Boîtes modulaires</span>
+                </li>
+                <li>
+                  <b>PLM</b>
+                  <span>Coffrets muraux</span>
+                </li>
+                <li>
+                  <b>PLA</b>
+                  <span>Armoires au sol</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="product-insulated-hero">
               <div class="insulated-image">
                 <img src="../assets/PANELSET_INSULATED.png" alt="" />
               </div>
-              <div class="insulated-hero-copy">
-                <strong>PanelSeT Insulated Enclosures</strong>
-                <span>Périmètre de validation au niveau famille</span>
-              </div>
-            </article>
-
-            <div class="insulated-range-list" aria-label="Sous-catégories PanelSeT Insulated">
-              <article class="insulated-range">
-                <b>PanelSeT TBS-TBP</b>
-                <span>Boîtes industrielles isolantes</span>
-              </article>
-              <article class="insulated-range">
-                <b>PanelSeT PLS</b>
-                <span>Boîtes modulaires isolantes</span>
-              </article>
-              <article class="insulated-range">
-                <b>PanelSeT PLM</b>
-                <span>Coffrets muraux isolants</span>
-              </article>
-              <article class="insulated-range">
-                <b>PanelSeT PLA</b>
-                <span>Armoires au sol isolantes</span>
-              </article>
             </div>
           </div>
         </section>
@@ -687,7 +739,7 @@
           <img src="../assets/processed/ul_certificate.png" alt="" />
           <h3>Capellades Lab est reconnu CTDP par UL depuis 1999, dossier DA307.</h3>
           <p>Les essais selon les normes UL peuvent être réalisés en totale autonomie, avec reconnaissance directe par Underwriters Laboratories Inc.</p>
-          <strong>La reconnaissance UL / CSA reste rattachée à KP dans la matrice.</strong>
+          <strong>La reconnaissance UL / CSA reste rattachée à Capellades dans la matrice.</strong>
         </aside>
 
         <div class="scope-matrix" aria-label="Normes de certification par laboratoire">
@@ -771,67 +823,7 @@
         </div>
       </section>
 
-      <section class="slide slide-products-tested" data-slide="11" aria-labelledby="tested-title">
-        <div class="technical-grid" aria-hidden="true"></div>
-        <div class="snapshot-glow" aria-hidden="true"></div>
-
-        <header class="tested-header">
-          <p class="kicker" data-reveal>Produits testés</p>
-          <h2 id="tested-title" data-title-reveal>Produits testés</h2>
-          <p class="tested-subtitle" data-reveal>Types de produits testés&nbsp;: PanelSeT Steel Enclosures, PanelSeT Insulated Enclosures et ClimaSys Thermal Management System.</p>
-        </header>
-
-        <div class="tested-list" aria-label="Familles de produits testées">
-          <article class="tested-card tested-spacial">
-            <div class="tested-thumb">
-              <img src="../assets/processed/product_spacial_centered.png" alt="" />
-            </div>
-            <div>
-              <h3>PanelSeT Steel Enclosures</h3>
-              <p>Gammes acier pour environnements industriels intérieurs</p>
-            </div>
-          </article>
-
-          <article class="tested-card tested-thalassa">
-            <div class="tested-thumb">
-              <img src="../assets/processed/product_thalassa_centered.png" alt="" />
-            </div>
-            <div>
-              <h3>PanelSeT Insulated Enclosures</h3>
-              <p>Gammes GRP, ABS recyclé et polycarbonate</p>
-            </div>
-          </article>
-
-          <article class="tested-card tested-climasys">
-            <div class="tested-thumb">
-              <img src="../assets/processed/product_climasys_centered.png" alt="" />
-            </div>
-            <div>
-              <h3>ClimaSys Thermal Management System</h3>
-              <p>Unités de ventilation, refroidissement, chauffage et contrôle</p>
-            </div>
-          </article>
-        </div>
-
-        <figure class="tested-hero" aria-label="Groupe de portefeuille produits">
-          <img src="../assets/processed/product_portfolio_hero.jpg" alt="Portefeuille produits PanelSeT et ClimaSys" />
-          <figcaption>
-            <span>Couverture du portefeuille</span>
-            <b>3 familles de produits</b>
-          </figcaption>
-        </figure>
-
-        <footer class="slide-footer" data-reveal>
-          <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
-          <span>Page 11</span>
-        </footer>
-
-        <div class="reference-overlay" aria-hidden="true">
-          <img src="../output/UE_LABS_Presentation_2025_Redesigned_slide_images/slide-11.png" alt="" />
-        </div>
-      </section>
-
-      <section class="slide slide-environments" data-slide="12" aria-labelledby="environments-title">
+      <section class="slide slide-environments" data-slide="11" aria-labelledby="environments-title">
         <div class="technical-grid" aria-hidden="true"></div>
         <div class="snapshot-glow" aria-hidden="true"></div>
 
@@ -871,7 +863,7 @@
           </article>
           <article class="env-card env-card-thermal">
             <h3>Gestion thermique</h3>
-            <p>Systèmes ClimaSys pour la performance thermique et les coffrets</p>
+            <p>Gestion thermique ClimaSys pour le refroidissement, le chauffage et la performance des coffrets</p>
           </article>
           <article class="env-card env-card-reliability">
             <h3>Fiabilité des coffrets</h3>
@@ -881,7 +873,7 @@
 
         <footer class="slide-footer" data-reveal>
           <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
-          <span>Page 12</span>
+          <span>Page 11</span>
         </footer>
 
         <div class="reference-overlay" aria-hidden="true">
@@ -889,7 +881,7 @@
         </div>
       </section>
 
-      <section class="slide slide-closing" data-slide="13" aria-labelledby="closing-title">
+      <section class="slide slide-closing" data-slide="12" aria-labelledby="closing-title">
         <div class="technical-grid" aria-hidden="true"></div>
 
         <header class="closing-brand" data-reveal>
@@ -921,7 +913,7 @@
 
         <footer class="slide-footer" data-reveal>
           <span>© 2026 Schneider Electric. Tous droits réservés | Propriété confidentielle de Schneider Electric</span>
-          <span>Page 13</span>
+          <span>Page 12</span>
         </footer>
 
         <div class="reference-overlay" aria-hidden="true">
@@ -933,16 +925,14 @@
     <nav class="controls" aria-label="Contrôles des diapositives">
       <button class="control icon-control" id="prev" type="button" aria-label="Diapositive précédente" title="Diapositive précédente">‹</button>
       <button class="control icon-control" id="next" type="button" aria-label="Diapositive suivante" title="Diapositive suivante">›</button>
-      <button class="control" id="replay" type="button" aria-label="Relancer l’animation" title="Relancer l’animation">↻</button>
-      <button class="control" id="reference" type="button" aria-label="Afficher/masquer la référence" title="Afficher/masquer la référence" aria-pressed="false">Réf</button>
       <button class="control icon-control" id="fullscreen" type="button" aria-label="Basculer en plein écran" title="Basculer en plein écran" aria-pressed="false">⛶</button>
       <span class="language-switcher" role="group" aria-label="Langue">
         <a class="control language-link is-active" data-language-link="fr" data-language-target="./" href="./#slide-1" aria-current="page">FR</a>
         <a class="control language-link" data-language-link="en" data-language-target="../" href="../#slide-1">EN</a>
       </span>
-      <span class="counter" id="counter">01 / 13</span>
+      <span class="counter" id="counter">01 / 12</span>
     </nav>
 
-    <script src="app.js?v=sarre-image-fit-20260525"></script>
+    <script src="app.js?v=remove-products-tested-20260526"></script>
   </body>
 </html>
